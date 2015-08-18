@@ -1,0 +1,32 @@
+---
+layout: default
+title: Rubymine and Ruby 1.9.x debugging - get it working
+date: 2012-09-14 18:00:22.000000000 +02:00
+categories:
+- Coding
+- Rails
+tags:
+- 1.9.x
+- debugger
+- ruby
+- rubymine
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '29044201'
+  _wpas_done_twitter: '1'
+excerpt: Get it working
+---
+<p>Sadly Rubymine still hasn't resolved the debugger issue when trying to debug a Ruby 1.9.x application inside Rubymine.</p>
+<p>It's not hard to get the debugger up and running when you know how, there's also a lot of chatter among the topic.</p>
+<p>It boils down to the following steps:</p>
+<ol>
+<li>Download<a href="https://rubyforge.org/frs/download.php/75414/linecache19-0.5.13.gem"> linecache19 0.5.13</a> and install it with<br />
+[code]gem install linecache19-0.5.13.gem[/code]</li>
+<li>Install the 1.9.x Ruby debug base (pre-release)<br />
+[code]gem install ruby-debug-base19x --pre[/code]</li>
+<li>Install the 1.9.x Ruby debug ide (also pre-release)<br />
+[code]gem install ruby-debug-ide19  --pre[/code]</li>
+<li>Start Rubymine and you're set!</li>
+</ol>

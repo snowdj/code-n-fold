@@ -1,0 +1,59 @@
+---
+layout: default
+title: Easy forking with git
+date: 2012-01-26 07:00:46.000000000 +01:00
+categories:
+- Bash
+- Git
+tags:
+- bash
+- git
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '29044201'
+  _thumbnail_id: '96'
+  publicize_results: a:1:{s:7:"twitter";a:1:{i:219923888;a:2:{s:7:"user_id";s:13:"0r1g4m14dd1c7";s:7:"post_id";s:18:"162426324764467200";}}}
+  _wpas_done_twitter: '1'
+
+---
+<p>Did you ever wanted to fork a project but weren't exactly sure about handling updates from the master repository?</p>
+<p>Then this might interest you:</p>
+<p>With git and its aliases you can easily fetch updates from both your fork and master repository, merging them with <strong>one git alias</strong>:</p>
+<p>[sourcecode gutter="false"]<br />
+git config alias.forkup '!git fetch origin -v; git fetch upstream -v; git merge upstream/master'<br />
+[/sourcecode]</p>
+<p>If you're a git pro and feel you're done now that's great! But if you'd like to know how the whole fork setup works read on.</p>
+<p>Here's the detailed explanation on how to setup the fork repository and link it with its master:</p>
+<p>Let's <strong>initialize</strong> a new repository for your fork:</p>
+<p>[sourcecode gutter="false"]<br />
+mkdir myfork<br />
+cd myfork<br />
+git init<br />
+[/sourcecode]</p>
+<p><strong>OR</strong> if you start with a bare <strong>remote</strong> repository, just clone it to your machine:</p>
+<p>[sourcecode gutter="false"]<br />
+git clone git@yourreposerver.com:myfork.git myfork<br />
+[/sourcecode]</p>
+<p>Next add the remote <strong>master</strong> repository you want to fork from to the local git configuration:</p>
+<p>[sourcecode gutter="false"]<br />
+git remote add upstream git@masterserver.com:masterproject.git<br />
+[/sourcecode]</p>
+<p>(You can, of course, change the remotes name from upstream to anything you like... The current remotes can be listed with <code> git remote -v</code>)</p>
+<p>Now you're now ready to <strong>fetch changes</strong> from the upstream repository:</p>
+<p>[sourcecode gutter="false"]<br />
+git fetch upstream<br />
+[/sourcecode]</p>
+<p>Pushing still works as ever, just push your changes to your remote with <code>git push origin master</code>.</p>
+<p>With the little git alias at the top you're able to easily fetch and merge the master repository and thus stay always up to date.<br />
+The alias uses the verbose mode so you see what's happening....</p>
+<p>[sourcecode gutter="false"]<br />
+git config alias.forkup '!git fetch origin -v; git fetch upstream -v; git merge upstream/master'<br />
+[/sourcecode]</p>
+<p>Add <code>--global</code> if the alias is suppost to be available in all your git projects.</p>
+<p>That's all there is to it, easy and fast: the git way!</p>
+<p>If you prefer bash aliases over the ones provided by git this should satisfy you:</p>
+<p>[sourcecode language="bash" gutter="false"]<br />
+alias gfu='git fetch origin -v; git fetch upstream -v; git merge upstream/master'<br />
+[/sourcecode]</p>

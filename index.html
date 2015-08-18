@@ -1,0 +1,19 @@
+---
+
+layout:     default
+title:      code 'n fold
+type:       home
+navigation: true
+
+date:       2015-08-18
+image:      header-nixie.jpg
+excerpt:    “In theory, there is no difference between theory and practice. But, in practice, there is.” – Jan L. A. van de Snepscheut
+gradient:   5
+
+---
+
+{% for post in paginator.posts %}
+
+  {% include summary.html %}
+
+{% endfor %}

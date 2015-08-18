@@ -1,0 +1,25 @@
+---
+layout: default
+title: Git 2 git migration script
+date: 2012-06-19 22:30:30.000000000 +02:00
+categories:
+- Bash
+- Coding
+- Git
+tags:
+- git migration
+- git2git
+- ruby
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '29044201'
+  _wpas_done_twitter: '1'
+---
+<p>Here's a small ruby script I wrote to help me facilitate an upcoming git to git migration.<br />
+It takes two params, first the name of the repository to be migrated, second the name of the new remote repository.<br />
+The script is simple and straightforward, it clones the remote repository to the current directory, fetches all branches, creates a new mirror, pushes all branches and pushes all tags - done.<br />
+Feel free to use and further improve it...<br />
+Note: The new remote repository must already exist (bare).</p>
+<p>[gist]https://gist.github.com/2956098[/gist]</p>

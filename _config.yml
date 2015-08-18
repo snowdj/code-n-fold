@@ -1,0 +1,21 @@
+# Site Settings
+baseurl: 		/code-n-fold
+title: 			code 'n fold
+
+name: 			code <i>'n</i> fold
+description: 	Code and Origami – Software Engineering
+url: 			"http://localhost:4000"
+
+paginate: 		42
+paginate_path: 	"blog/page:num"
+
+twitter: 		code_n_fold
+email: 			daniel.kummer@gmail.com
+
+disqus: 		danielkummer
+analytics: 		UA-66459836-1
+
+copyright: 		Copyright 2015 Daniel Kummer.
+
+# Build Settings
+permalinks: 	pretty

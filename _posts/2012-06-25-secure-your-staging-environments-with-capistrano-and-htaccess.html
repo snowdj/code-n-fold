@@ -1,0 +1,42 @@
+---
+layout: default
+title: Secure your staging environments with capistrano and .htaccess
+date: 2012-06-25 12:53:20.000000000 +02:00
+categories:
+- Coding
+- Server
+- Tools
+tags:
+- ".htaccess"
+- capistrano
+- enterprise-it
+- production environment
+- production environments
+- protect
+- ruby
+- staging system
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '29044201'
+  _wpas_done_twitter: '1'
+excerpt: Easily enable and disable htaccess basic protection via command line
+---
+<p>Are you using capistrano to deploy your application to multiple environments?<br />
+Are you using a public staging system but like to easily control access via .htacces file?<br />
+Then this might interest you.</p>
+<p>A little bit more context information.<br />
+I have a project with two deploy environments configured using capistrano, staging and production.<br />
+The staging environment is used for client testing before the product gets released onto the production environment.<br />
+We're hosting our staging and production environments using a 3rd party hosting provider.<br />
+Both environments are publicly accessible but - of course - the client demands restricted access on the staging environment.</p>
+<p>Theres quite an easy way to automate .htaccess protection using capistrano.</p>
+<p>First, add the following two tasks to your deploy.rb script:</p>
+<p>[gist]https://gist.github.com/2988156[/gist]</p>
+<p><a href="https://www.htaccesstools.com/htaccess-authentication/">This website</a> provides an easy and convenient tool to generate the .htpasswd file. Use it to generate your password and replace the [USER]:[ENC_PASSWD] string above with the correct output.</p>
+<p>Done! You're now able to protect and unprotect a deploy environment with the following two capistrano tasks:</p>
+<p>[code][/code]<br />
+cap deploy:protect<br />
+cap deploy:unprotect<br />
+[code][/code]</p>
