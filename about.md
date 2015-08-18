@@ -6,7 +6,7 @@ navigation: true
 
 date: 2011-11-22
 gradient: 2
-image: header-2.jpg
+image: header-typewriter.jpg
 excerpt: About me, my job, my life, my passions
 ---
 

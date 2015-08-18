@@ -10,10 +10,9 @@ tags:
 status: publish
 type: post
 published: true
-meta:
-  _edit_last: '29044201'
-  _wpas_done_twitter: '1'
 excerpt: Understand how it's done!
+navigation: true
+
 ---
 
 Those of you who've already read the great blog post [A successful git branching model](https://nvie.com/posts/a-successful-git-branching-model/) from Vincent Driessens might want to take a look at the [git flow extension](https://github.com/nvie/gitflow/) written by the same author.

@@ -19,3 +19,5 @@ copyright: 		Copyright 2015 Daniel Kummer.
 
 # Build Settings
 permalinks: 	pretty
+
+category_title_prefix: ''

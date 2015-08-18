@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Fix wrong UTF-8 encodings in MySQL table
+title: Fix MySQL UTF-8 encoding
 date: 2012-04-12
 categories:
 - SQL
@@ -11,25 +11,26 @@ tags:
 - sql alter table
 - utf8
 type: post
-excerpt: Ever had problems with wrongly encoded characters in a mysql table? You're not alone! 3 easy sql commands will help...
+excerpt: Ever had problems with utf-8 encoded characters in a mysql table? You're not alone! 3 easy sql commands might help...
+navigation: true
 
 ---
 ## Problem
 
-I recently had the problem with wrongly encoded chinese (and many other) characters which looked like this:
+I recently had the problem with wrong encoded chinese characters which looked like this:
 
 <pre>å¤šé€‰åž‹ PersonalFit ä¸­å·ã€å¤§å·ã€è¶…å¤§å·</pre>
 
 ## Solution
 
-I've tried several ways to fix the encodings but one easy solution solves your problem:
-You have to **convert** the affected table columns three times.
+I've tried several ways to fix the encodings but one easy solution solved my problem:
+I had to **convert** the affected table columns three times.
 
 1. Convert to latin1
 2. Convert to blob
 3. Convert back to utf8<
 
-Let's say you have a column called <em>name</em> in your table. Here's the sql script to do the trick:
+So, if you have a column called <em>name</em> in your table, the following sql script to do the trick:
 
 {% highlight sql %}
 
@@ -39,7 +40,7 @@ ALTER TABLE products CHANGE name name TEXT CHARACTER SET utf8;
 
 {% endhighlight %}
 
-After checking the values again the encoding is now correct:
+After checking the values again the encoding should now be correct like mine:
 <pre>多选型 PersonalFit 中号、大号、超大号</pre>
 
-I hope this solves your problem too - enjoy!
+Hopefully now your problem's solved :)
