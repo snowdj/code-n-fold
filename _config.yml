@@ -20,4 +20,6 @@ copyright: 		Copyright 2015 Daniel Kummer.
 # Build Settings
 permalinks: 	pretty
 
+#permalink: '/:year/:month/:title'
+
 category_title_prefix: ''
