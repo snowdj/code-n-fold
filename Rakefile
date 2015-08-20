@@ -32,4 +32,9 @@ task :publish => [:generate] do
   end
 end
 
+desc "Run jekyll"
+task :run do
+  system "jekyll serve --baseurl ''"
+end
+
 task :default => :publish
