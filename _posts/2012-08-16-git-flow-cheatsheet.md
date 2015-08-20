@@ -2,8 +2,7 @@
 layout: default
 title: Git flow cheatsheet
 date: 2012-08-16 18:00:18.000000000 +02:00
-categories:
-- Git
+category: Git
 tags:
 - cheatsheet
 - git-flow

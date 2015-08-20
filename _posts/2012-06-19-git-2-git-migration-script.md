@@ -2,10 +2,7 @@
 layout: default
 title: Git 2 git migration script
 date: 2012-06-19
-categories:
-- Bash
-- Coding
-- Git
+category: Git
 tags:
 - git migration
 - git2git
@@ -21,4 +18,4 @@ The script is simple and straightforward, it clones the remote repository to the
 Feel free to use and further improve it...
 Note: The new remote repository must already exist (bare).
 
-[gist]https://gist.github.com/2956098[/gist]
+{% gist 2956098 %}
