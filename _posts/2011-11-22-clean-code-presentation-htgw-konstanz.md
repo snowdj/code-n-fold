@@ -2,12 +2,13 @@
 layout: default
 title: Clean Code presentation @ HTGW Konstanz
 date: 2011-11-22
-category: Speaker
+category: Talk
 tags:
 - code
 - presentation
 type: post
 excerpt: I recently held a presentation about clean code at the university of applied sciences in Konstanz Germany. I'll remember it as a great experience and a great, interested crowd.
+
 ---
 
 

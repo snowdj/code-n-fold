@@ -3,7 +3,6 @@ layout: default
 title: First Post
 date: 2011-11-22
 type: post
-published: true
 excerpt: Everything begins somewhere...
 ---
 
