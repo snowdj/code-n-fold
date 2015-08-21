@@ -26,4 +26,4 @@ permalinks: 	pretty
 gems:
   - jekyll-redirect-from
 
-exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', 'README.md', '.sass-cache']
+exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', 'README.md', '.sass-cache', 'resources']

@@ -2,7 +2,7 @@
 layout: default
 title: Git! Why? How?
 date: 2011-11-22 18:33:59.000000000 +01:00
-category: Talk
+category: Talks
 tags:
 - git
 - presentation

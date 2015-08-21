@@ -18,9 +18,18 @@
     }
 }
 
-
 .tag {
-    @include tag(lighten($alt-background-color, 10%));
+    @include tag(lighten($action-color, 10%));
     display: inline-block;
     margin-right: 2px;
+
+    &:hover, &:focus {
+        background-color: $alt-background-color;
+    }
+}
+
+
+.list-unstyled {
+    padding-left: 0;
+    list-style: none;
 }

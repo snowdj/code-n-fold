@@ -2,7 +2,7 @@
 layout: default
 title: Skills - my latest project
 date: 2012-06-05
-category: Project
+category: Projects
 tags:
 - namics
 - skills

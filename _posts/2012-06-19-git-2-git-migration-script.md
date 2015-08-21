@@ -2,8 +2,9 @@
 layout: default
 title: Git 2 git migration script
 date: 2012-06-19
-category: Git
+category: Programming
 tags:
+- git
 - git migration
 - git2git
 - ruby

@@ -3,7 +3,7 @@ layout: default
 title: Magnolia Conference 2012
 excerpt: Hot topic - Magnolia 5
 date: 2012-09-10 08:58:18.000000000 +02:00
-category: Conference
+category: Conferences
 tags:
 - conference
 - magnolia

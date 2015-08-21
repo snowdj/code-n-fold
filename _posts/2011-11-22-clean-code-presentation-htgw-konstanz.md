@@ -2,7 +2,7 @@
 layout: default
 title: Clean Code presentation @ HTGW Konstanz
 date: 2011-11-22
-category: Talk
+category: Talks
 tags:
 - code
 - presentation

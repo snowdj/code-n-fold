@@ -3,7 +3,7 @@
 layout: default
 title: Git - Differences to Subversion, branching and tooling
 date: 2012-02-13
-category: Talk
+category: Talks
 tags:
 - git
 - Subversion

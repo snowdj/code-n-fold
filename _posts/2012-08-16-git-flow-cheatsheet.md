@@ -2,10 +2,11 @@
 layout: default
 title: Git flow cheatsheet
 date: 2012-08-16 18:00:18.000000000 +02:00
-category: Git
+category: Projects
 tags:
 - cheatsheet
 - git-flow
+- git
 status: publish
 type: post
 published: true
