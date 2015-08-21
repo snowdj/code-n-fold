@@ -23,7 +23,7 @@
     <meta name="twitter:image" content="{{ page.image | prepend: '/images/' | prepend: site.baseurl | prepend: site.url }}" />
     <meta name="twitter:site" content="{{ site.twitter | prepend: '@' }}" />
 
-    <link rel="alternate" href="{{ '/feed.xml' | prepend: site.baseurl }}" type="application/rss+xml" title="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
+    <link rel="alternate" href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}" type="application/rss+xml" title="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
     <link rel="canonical" href="{{ page.url | replace: 'index.html', '' | prepend: site.baseurl }}" />
 
     <link rel="stylesheet" href="{{ '/assets/normalize.css' | prepend: site.baseurl }}" />
@@ -69,7 +69,7 @@
           {% endfor %}
 
         <hr/>
-        
+
           {% for post in posts %}
             {% if post.title and post.type != 'home' %}
               <li><a href="{{ post.url | prepend: site.baseurl }}" title="{{ post.title }}">{{ post.title }}</a></li>

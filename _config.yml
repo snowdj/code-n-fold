@@ -6,7 +6,7 @@ name: 			code <i>'n</i> fold
 description: 	Code and Origami – Software Engineering
 url: 			"http://www.code-n-fold.com"
 
-paginate: 		5
+paginate: 		7
 paginate_path: 	"blog/page:num"
 
 twitter: 		code_n_fold
@@ -26,4 +26,4 @@ permalinks: 	pretty
 gems:
   - jekyll-redirect-from
 
-exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', 'README.md']
+exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', 'README.md', '.sass-cache']

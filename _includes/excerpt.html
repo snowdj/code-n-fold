@@ -29,7 +29,16 @@
 
 		{% if page.type == 'post' %}
 
-			<span class="meta">Published {{ page.date | date: '%b %-d, %Y' | prepend: '<b>' | append: '</b>' }} {{ page.categories | join: ', ' | prepend: 'in <b>' | append: '</b>' }} with tags:       
+			<span class="meta">Published {{ page.date | date: '%b %-d, %Y' | prepend: '<b>' | append: '</b>' }}
+
+        {% if page.categories.size > 0 %}
+          {{ page.categories | join: ', ' | prepend: 'in <b>' | append: '</b>' }}
+        {% endif %}
+
+        {% if page.tags.size > 0 %}
+          with tags:
+        {% endif %}
+
         {% for tag in page.tags %}
           <a class="tag" href="{{ tag | downcase | replace: ' ', '-' | prepend:'/tags/' | prepend: site.baseurl }}">{{ tag }}</a>
         {% endfor %}
