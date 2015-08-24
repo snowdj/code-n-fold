@@ -12,7 +12,7 @@ paginate_path: 	"blog/page:num"
 twitter: 		code_n_fold
 email: 			daniel.kummer@gmail.com
 
-disqus: 		danielkummer
+disqus: 		code-n-fold
 analytics: 		UA-66459836-1
 
 copyright: 		Copyright 2015 Daniel Kummer.
