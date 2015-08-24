@@ -1,13 +1,15 @@
 ---
 
 layout: default
+date: 2015-08-24
 title: Trust me, I'm an engineer
 category: Fun
 tags:
 - youtube
 type: post
 excerpt: Trust me I'm an engineer - an epic song about us engineers... 
-image: header-nixie.jpg
+image: 2015-08-24-trust-me-im-an-engineer.jpg
+details: true
 gradient: 2
 
 ---
