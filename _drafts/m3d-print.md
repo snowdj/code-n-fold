@@ -4,9 +4,9 @@ layout: default
 title: The Micro 3D Printer
 category: Gadgets
 tags:
-- presentation
-- http
-- internet
+- 3d print
+- m3d
+- micro
 type: post
 excerpt: My new gadget, the {% extlink M3D - Micro 3D Printer http://printm3d.com %} is a cheap and easy to use 3d printer designed for personal use. 
 image: header-http.png
