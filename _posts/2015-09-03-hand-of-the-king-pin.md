@@ -8,7 +8,7 @@ tags:
 - m3d
 - micro
 - thingiverse
-
+date: 2015-09-03
 type: post
 excerpt: Another 3D print - the Game of Throne "hand of the king pin" from <a href="http://www.thingiverse.com/thing:630577">thingiverse</a>  
 image: m3d-print/my-printer.jpg
