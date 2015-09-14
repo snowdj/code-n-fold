@@ -8,11 +8,11 @@ tags:
 - m3d
 - micro
 - thingiverse
-
 type: post
 excerpt: A 3D print - chinese dragon model from <a href="http://www.thingiverse.com/thing:16860">thingiverse</a>  
 image: m3d-print/my-printer.jpg
 gradient: 2
+date: 2015-09-14
 
 ---
 
