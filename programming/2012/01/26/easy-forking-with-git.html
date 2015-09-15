@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <title>Easy forking with git</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Code and Origami – Software Engineering" />
+
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="code 'n fold" />
+    <meta property="og:title" content="Easy forking with git" />
+    <meta property="og:description" content="Code and Origami – Software Engineering" />
+    <meta property="og:url" content="http://www.code-n-fold.com/programming/2012/01/26/easy-forking-with-git.html" />
+    <meta property="og:image" content="http://www.code-n-fold.com/images/" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Easy forking with git" />
+    <meta name="twitter:url" content="http://www.code-n-fold.com/programming/2012/01/26/easy-forking-with-git.html" />
+    <meta name="twitter:image" content="http://www.code-n-fold.com/images/" />
+    <meta name="twitter:site" content="@code_n_fold" />
+    <meta name="twitter:creator" content="@code_n_fold" />
+    
+    <meta name="twitter:description" content="Code and Origami – Software Engineering">
+    
+    
+
+
+    <link rel="alternate" href="http://www.code-n-fold.com/feed.xml" type="application/rss+xml" title="Easy forking with git" />
+    <link rel="canonical" href="/programming/2012/01/26/easy-forking-with-git.html" />
+
+    <link rel="stylesheet" href="/assets/normalize.css" />
+    <link rel="stylesheet" href="/assets/animate.css" />
+    <link rel="stylesheet" href="/assets/styles.css" />
+    <link rel="stylesheet" href="/assets/custom.css" />
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-66459836-1', 'auto');
+        ga('send', 'pageview');
+      </script>
+    
+
+  </head>
+
+  <body>
+
+    <header data-animation="fadeInDownBig">
+
+      <a href="/" title="Back to Homepage" class="logo">code <i>'n</i> fold</a>
+
+      
+      
+
+      <button class="toggle">Menu</button>
+      <nav>
+        <ul>
+          <li><a href="/" title="Home">Home</a></li>
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              <li><a href="/about.html" title="About">About</a></li>
+            
+          
+            
+              <li><a href="/projects.html" title="Projects">Projects</a></li>
+            
+          
+            
+              <li><a href="/archive/" title="Archive">Archive</a></li>
+            
+          
+            
+              <li><a href="/categories.html" title="Categories">Categories</a></li>
+            
+          
+
+        <hr/>
+
+          
+            
+              <li><a href="/tools/2011/11/28/convert-mysql-dump-to-sqlite-format.html" title="MySQL 2 SQLite">MySQL 2 SQLite</a></li>
+            
+          
+            
+              <li><a href="/sql/2012/04/12/fix-wrong-utf-8-encodings-in-mysql-table.html" title="Fix MySQL UTF-8 encoding">Fix MySQL UTF-8 encoding</a></li>
+            
+          
+            
+              <li><a href="/deployment/2012/06/25/secure-your-staging-environments-with-capistrano-and-htaccess.html" title="Capistrano and .htaccess">Capistrano and .htaccess</a></li>
+            
+          
+            
+              <li><a href="/projects/2012/08/16/git-flow-cheatsheet.html" title="Git flow cheatsheet">Git flow cheatsheet</a></li>
+            
+          
+        </ul>
+      </nav>
+
+    </header>
+
+
+
+	
+
+
+<section class="content">
+
+	<article>
+
+		<header class="gradient-1" data-animation="fadeInDownBig">
+
+			
+
+<div class="excerpt">
+
+  
+    <span class="title">1 minute</span>
+  
+
+	
+
+		
+			<h1><a href="/programming/2012/01/26/easy-forking-with-git.html" title="Easy forking with git">Easy forking with git</a></h1>
+		
+
+
+	
+
+	<p>Did you ever wanted to fork a project but weren't exactly sure about handling updates from the master repository?</p>
+
+	
+
+		
+
+			<span class="meta">Published <b>Jan 26, 2012</b>
+
+        
+          in <b>programming</b>
+        
+
+        
+          with tags:
+        
+
+        
+          <a class="tag" href="/tags/bash">bash</a>
+        
+          <a class="tag" href="/tags/git">git</a>
+        
+      </span>
+
+		
+
+	
+
+</div>
+
+
+	<a href="#" title="Scroll" class="scroll">Scroll</a>
+
+
+
+		</header>
+
+		<div class="body" data-animation="fadeInUp">
+
+			<p>With git and its aliases you can easily fetch updates from both your fork and master repository, merging them with <strong>one git alias</strong>:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">git config alias.forkup <span class="s1">&#39;!git fetch origin -v; git fetch upstream -v; git merge upstream/master&#39;</span></code></pre></div>
+
+<p>If you’re a git pro and feel you’re done now that’s great! But if you’d like to know how the whole fork setup works read on.</p>
+
+<p>Here’s the detailed explanation on how to setup the fork repository and link it with its master:</p>
+
+<p>Let’s <strong>initialize</strong> a new repository for your fork:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">mkdir myfork
+<span class="nb">cd </span>myfork
+git init</code></pre></div>
+
+<p><strong>OR</strong> if you start with a bare <strong>remote</strong> repository, just clone it to your machine:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">git clone git@yourreposerver.com:myfork.git myfork</code></pre></div>
+
+<p>Next add the remote <strong>master</strong> repository you want to fork from to the local git configuration:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">git remote add upstream git@masterserver.com:masterproject.git</code></pre></div>
+
+<p>(You can, of course, change the remotes name from upstream to anything you like… The current remotes can be listed with <code> git remote -v</code>)</p>
+
+<p>Now you’re now ready to <strong>fetch changes</strong> from the upstream repository:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">git fetch upstream</code></pre></div>
+
+<p>Pushing still works as ever, just push your changes to your remote with <code>git push origin master</code>.</p>
+
+<p>With the little git alias at the top you’re able to easily fetch and merge the master repository and thus stay always up to date.
+The alias uses the verbose mode so you see what’s happening….</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">git config alias.forkup <span class="s1">&#39;!git fetch origin -v; git fetch upstream -v; git merge upstream/master&#39;</span></code></pre></div>
+
+<p>Add <code>--global</code> if the alias is suppost to be available in all your git projects.</p>
+
+<p>That’s all there is to it, easy and fast: the git way!</p>
+
+<p>If you prefer bash aliases over the ones provided by git this should satisfy you:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">alias </span><span class="nv">gfu</span><span class="o">=</span><span class="s1">&#39;git fetch origin -v; git fetch upstream -v; git merge upstream/master&#39;</span></code></pre></div>
+
+
+
+		</div>
+
+		<footer>
+
+			
+
+  <div class="meta">
+
+    <div class="author" data-animation="fadeInUp">
+                  
+      <span class="title">Written by</span>
+
+      <h4>Daniel Kummer</h4>
+      <p>I'm a software engineer who also enjoys lots of other things like diving, tinkering, photography, whiskey and much more...</p>
+
+      
+        <ul>
+          <li><a href="https://twitter.com/code_n_fold" title="Twitter" class="icon twitter">Twitter</a></li>
+          <li><a href="https://www.facebook.com/daniel.kummer" title="Facebook" class="icon facebook">Facebook</a></li>
+          
+          <li><a href="https://www.linkedin.com/pub/daniel-kummer/58/344/528" title="LinkedIn" class="icon linkedin">LinkedIn</a></li>
+          
+          
+          
+          <li><a href="feed://code-n-fold.com/feed.xml" title="RSS" class="icon rss">RSS</a></li>
+        </ul>
+      
+
+    </div>
+
+    <div class="share" data-animation="fadeInUp">
+                  
+      <span class="title">Share</span>
+
+      <ul>
+        <li><a href="https://twitter.com/home?status=Code%20and%20Origami%20%E2%80%93%20Software%20Engineering%20http://www.code-n-fold.com/programming/2012/01/26/easy-forking-with-git.html" title="Tweet" class="icon twitter">Tweet</a></li>
+        <li><a href="https://www.facebook.com/sharer/sharer.php?u=http://www.code-n-fold.com/programming/2012/01/26/easy-forking-with-git.html" title="Like" class="icon facebook">Like</a></li>
+        <li><a href="https://plus.google.com/share?url=http://www.code-n-fold.com/programming/2012/01/26/easy-forking-with-git.html" title="+1" class="icon google">+1</a></li>
+      </ul>
+
+    </div>
+
+  </div>
+
+
+
+			
+  <div class="comments" data-animation="fadeInUp">
+    
+    <span class="title">Comments</span>
+    <div id="disqus_thread"></div>
+
+    <script type="text/javascript">
+      var disqus_shortname = 'code-n-fold';
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+
+    <noscript>
+      Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+    </noscript>
+
+  </div>
+
+
+			
+
+	<div class="pagination" data-animation="fadeInUp">
+		<a href="/tools/2012/01/16/watch-folders-with-hazel.html" title="View Older Posts" class="button older">Older</a>
+		<a href="/programming/2012/02/03/gitlabhq-gitolite-apache-passenger-and-centos-5-5.html" title="View Newer Posts" class="button newer">Newer</a>
+	</div>
+
+
+
+
+
+		</footer>
+
+	</article>
+
+</section>
+
+
+
+	
+		
+	
+
+	
+		
+	
+
+	<section class="teaser gradient-1" data-animation="fadeInUp">
+	      
+		<div class="excerpt">
+	            
+			<span class="title">less than 1 minute</span>
+
+			
+				<h1><a href="/tools/2012/01/16/watch-folders-with-hazel.html" title="Watch folders with Hazel!">Watch folders with Hazel!</a></h1>
+			
+
+			<p>The latest tool I enjoy using is the rather unknown but brings ingenious and simple folder watching/actions to osx with a lot of configuration options.</p>
+
+			
+				<span class="meta">Published <b>Jan 16, 2012</b> in <b>tools</b></span>
+			
+
+		</div>
+
+	</section>
+
+
+
+    
+
+      <footer data-animation="fadeInUp">
+        <div class="copyright">
+          <b>Copyright 2015 Daniel Kummer.</b> All Rights Reserved.
+        	<a href="mailto:daniel.kummer@gmail.com" title="Send E-Mail">Contact</a>
+        	<a href="/feed.xml" title="Subscribe to Feed">RSS</a>
+        </div>
+      </footer>
+      
+    
+
+    <script type="application/ld+json">
+    { "@context" : "http://schema.org",
+      "@type" : "Person",
+      "name" : "Daniel Kummer",
+      "url" : "http://www.code-n-fold.com",
+      "sameAs" : [ "http://www.facebook.com/daniel.kummer",
+        "http://www.twitter.com/code_n_fold"]
+    }
+    </script>
+    
+    <script src="/assets/jquery-2.1.1.min.js"></script>
+    <script src="/assets/viewportchecker.js"></script>
+    <script src="/assets/scripts.js"></script>
+
+  </body>
+
+</html>

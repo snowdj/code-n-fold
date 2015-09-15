@@ -1,86 +1,1714 @@
----
+<!DOCTYPE html>
+<html>
 
-layout:   default
-title:    Categories
-image:    header-typewriter.jpg
-gradient: 2
-weight:   40
-excerpt:  Browse content by categories
-navigation: true
+  <head>
 
----
-{% comment%}
-Here we generate all the categories.
-TODO: i'm not sure if i'll be using this
-{% endcomment%}
+    <title>Categories</title>
 
-{% assign rawcats = "" %}
-{% for post in site.posts %}
-{% assign tcats = post.category | join:'|' | append:'|' %}
-{% assign rawcats = rawcats | append:tcats %}
-{% endfor %}
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Code and Origami – Software Engineering" />
 
-{% assign rawcats = rawcats | split:'|' | sort %}
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="code 'n fold" />
+    <meta property="og:title" content="Categories" />
+    <meta property="og:description" content="Code and Origami – Software Engineering" />
+    <meta property="og:url" content="http://www.code-n-fold.com/categories.html" />
+    <meta property="og:image" content="http://www.code-n-fold.com/images/header-typewriter.jpg" />
 
-{% assign cats = "" %}
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Categories" />
+    <meta name="twitter:url" content="http://www.code-n-fold.com/categories.html" />
+    <meta name="twitter:image" content="http://www.code-n-fold.com/images/header-typewriter.jpg" />
+    <meta name="twitter:site" content="@code_n_fold" />
+    <meta name="twitter:creator" content="@code_n_fold" />
+    
+    <meta name="twitter:description" content="Code and Origami – Software Engineering">
+    
+    
 
-{% for cat in rawcats %}
-{% if cat != "" %}
 
-{% if cats == "" %}
-{% assign cats = cat | split:'|' %}
-{% endif %}
+    <link rel="alternate" href="http://www.code-n-fold.com/feed.xml" type="application/rss+xml" title="Categories" />
+    <link rel="canonical" href="/categories.html" />
 
-{% unless cats contains cat %}
-{% assign cats = cats | join:'|' | append:'|' | append:cat | split:'|' %}
-{% endunless %}
-{% endif %}
-{% endfor %}
+    <link rel="stylesheet" href="/assets/normalize.css" />
+    <link rel="stylesheet" href="/assets/animate.css" />
+    <link rel="stylesheet" href="/assets/styles.css" />
+    <link rel="stylesheet" href="/assets/custom.css" />
 
-<h2 class="page-title"> {{ page.title }}</h2>
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-66459836-1', 'auto');
+        ga('send', 'pageview');
+      </script>
+    
+
+  </head>
+
+  <body>
+
+    <header data-animation="fadeInDownBig">
+
+      <a href="/" title="Back to Homepage" class="logo">code <i>'n</i> fold</a>
+
+      
+      
+
+      <button class="toggle">Menu</button>
+      <nav>
+        <ul>
+          <li><a href="/" title="Home">Home</a></li>
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              <li><a href="/about.html" title="About">About</a></li>
+            
+          
+            
+              <li><a href="/projects.html" title="Projects">Projects</a></li>
+            
+          
+            
+              <li><a href="/archive/" title="Archive">Archive</a></li>
+            
+          
+            
+              <li><a href="/categories.html" title="Categories">Categories</a></li>
+            
+          
+
+        <hr/>
+
+          
+            
+              <li><a href="/tools/2011/11/28/convert-mysql-dump-to-sqlite-format.html" title="MySQL 2 SQLite">MySQL 2 SQLite</a></li>
+            
+          
+            
+              <li><a href="/sql/2012/04/12/fix-wrong-utf-8-encodings-in-mysql-table.html" title="Fix MySQL UTF-8 encoding">Fix MySQL UTF-8 encoding</a></li>
+            
+          
+            
+              <li><a href="/deployment/2012/06/25/secure-your-staging-environments-with-capistrano-and-htaccess.html" title="Capistrano and .htaccess">Capistrano and .htaccess</a></li>
+            
+          
+            
+              <li><a href="/projects/2012/08/16/git-flow-cheatsheet.html" title="Git flow cheatsheet">Git flow cheatsheet</a></li>
+            
+          
+        </ul>
+      </nav>
+
+    </header>
+
+
+
+	
+
+
+<section class="content">
+
+	<article>
+
+		<header class="gradient-2" data-animation="fadeInDownBig">
+
+			<div class="overlay" style="background-image: url(/images/header-typewriter.jpg);" data-parallax="9"></div>
+
+<div class="excerpt">
+
+  
+
+	
+
+		
+			<h1><a href="/categories.html" title="Categories">Categories</a></h1>
+		
+
+
+	
+
+	<p>Browse content by categories</p>
+
+	
+
+</div>
+
+
+	<a href="#" title="Scroll" class="scroll">Scroll</a>
+
+
+
+		</header>
+
+		<div class="body" data-animation="fadeInUp">
+
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="page-title"> Categories</h2>
 
 <div class="posts">
 <p>
-{% for ct in cats %}
-<a href="#{{ ct | slugify }}" style="color:#999;text-decoration: none;"> {{ ct }} </a> &nbsp;&nbsp;
-{% endfor %}
+
+<a href="#3d-print" style="color:#999;text-decoration: none;"> 3D Print </a> &nbsp;&nbsp;
+
+<a href="#conferences" style="color:#999;text-decoration: none;"> Conferences </a> &nbsp;&nbsp;
+
+<a href="#diy" style="color:#999;text-decoration: none;"> DIY </a> &nbsp;&nbsp;
+
+<a href="#deployment" style="color:#999;text-decoration: none;"> Deployment </a> &nbsp;&nbsp;
+
+<a href="#fun" style="color:#999;text-decoration: none;"> Fun </a> &nbsp;&nbsp;
+
+<a href="#gadgets" style="color:#999;text-decoration: none;"> Gadgets </a> &nbsp;&nbsp;
+
+<a href="#programming" style="color:#999;text-decoration: none;"> Programming </a> &nbsp;&nbsp;
+
+<a href="#projects" style="color:#999;text-decoration: none;"> Projects </a> &nbsp;&nbsp;
+
+<a href="#talks" style="color:#999;text-decoration: none;"> Talks </a> &nbsp;&nbsp;
+
+<a href="#tools" style="color:#999;text-decoration: none;"> Tools </a> &nbsp;&nbsp;
+
 <a href="#no-category" style="color:#999;text-decoration: none;"> No Category </a> &nbsp;&nbsp;
 </p>
 
-{% for ct in cats %}
-<h3 id="{{ ct | slugify }}">{{ ct }}</h3>
+
+<h3 id="3d-print">3D Print</h3>
 <ul class="list-unstyled">
-  {% for post in site.posts %}
-  {% if post.category contains ct %}
+  
+  
+  
+  
   <li>
     <h4>
-      <a href="{{ post.url }}"> {{ post.title }} </a>
-      <small>{{ post.date | date: '%b %-d, %Y' | prepend: '<b>' | append: '</b>' }}</small>
+      <a href="/3d%20print/2015/09/14/chinese-dragon.html"> 3D Print - Chinese dragon </a>
+      <small><b>Sep 14, 2015</b></small>
     </h4>
-    {% for tag in post.tags %}
-      <a class="tag" href="/blog/tag/#{{ tag | slugify }}">{{ tag }}</a>
-    {% endfor %}
+    
+      <a class="tag" href="/blog/tag/#3d-print">3d print</a>
+    
+      <a class="tag" href="/blog/tag/#m3d">m3d</a>
+    
+      <a class="tag" href="/blog/tag/#micro">micro</a>
+    
+      <a class="tag" href="/blog/tag/#thingiverse">thingiverse</a>
+    
   </li>
-  {% endif %}
-  {% endfor %}
+  
+  
+  
+  <li>
+    <h4>
+      <a href="/3d%20print/2015/09/08/t-rex.html"> 3D Print - T-Rex Skull </a>
+      <small><b>Sep 8, 2015</b></small>
+    </h4>
+    
+      <a class="tag" href="/blog/tag/#3d-print">3d print</a>
+    
+      <a class="tag" href="/blog/tag/#m3d">m3d</a>
+    
+      <a class="tag" href="/blog/tag/#micro">micro</a>
+    
+      <a class="tag" href="/blog/tag/#thingiverse">thingiverse</a>
+    
+  </li>
+  
+  
+  
+  <li>
+    <h4>
+      <a href="/3d%20print/2015/09/03/hand-of-the-king-pin.html"> 3D Print - Hand Of The King Pin from Game of Thrones </a>
+      <small><b>Sep 3, 2015</b></small>
+    </h4>
+    
+      <a class="tag" href="/blog/tag/#3d-print">3d print</a>
+    
+      <a class="tag" href="/blog/tag/#m3d">m3d</a>
+    
+      <a class="tag" href="/blog/tag/#micro">micro</a>
+    
+      <a class="tag" href="/blog/tag/#thingiverse">thingiverse</a>
+    
+  </li>
+  
+  
+  
+  <li>
+    <h4>
+      <a href="/3d%20print/2015/08/31/happy-octopus.html"> 3D Print - The cute octopus sd-card holder </a>
+      <small><b>Aug 31, 2015</b></small>
+    </h4>
+    
+      <a class="tag" href="/blog/tag/#3d-print">3d print</a>
+    
+      <a class="tag" href="/blog/tag/#m3d">m3d</a>
+    
+      <a class="tag" href="/blog/tag/#micro">micro</a>
+    
+      <a class="tag" href="/blog/tag/#thingiverse">thingiverse</a>
+    
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 </ul>
-{% endfor %}
+
+<h3 id="conferences">Conferences</h3>
+<ul class="list-unstyled">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h4>
+      <a href="/conferences/2012/09/10/magnolia-conference-2012.html"> Magnolia Conference 2012 </a>
+      <small><b>Sep 10, 2012</b></small>
+    </h4>
+    
+      <a class="tag" href="/blog/tag/#conference">conference</a>
+    
+      <a class="tag" href="/blog/tag/#magnolia">magnolia</a>
+    
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</ul>
+
+<h3 id="diy">DIY</h3>
+<ul class="list-unstyled">
+  
+  
+  <li>
+    <h4>
+      <a href="/diy/2015/09/15/useless-box-sneak-peek.html"> Useless Box - Sneak Peek </a>
+      <small><b>Sep 15, 2015</b></small>
+    </h4>
+    
+      <a class="tag" href="/blog/tag/#useless-box">useless-box</a>
+    
+      <a class="tag" href="/blog/tag/#arduino">arduino</a>
+    
+      <a class="tag" href="/blog/tag/#tinkering">tinkering</a>
+    
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h4>
+      <a href="/diy/2012/03/22/mypad-build-your-own-clipboard-out-of-an-old-macbook-pro.html"> myPad - Build your own clipboard out of an old MacBook Pro </a>
+      <small><b>Mar 22, 2012</b></small>
+    </h4>
+    
+      <a class="tag" href="/blog/tag/#macbook-pro">MacBook Pro</a>
+    
+      <a class="tag" href="/blog/tag/#reuse">reuse</a>
+    
+      <a class="tag" href="/blog/tag/#tinkering">tinkering</a>
+    
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</ul>
+
+<h3 id="deployment">Deployment</h3>
+<ul class="list-unstyled">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h4>
+      <a href="/deployment/2012/06/25/secure-your-staging-environments-with-capistrano-and-htaccess.html"> Capistrano and .htaccess </a>
+      <small><b>Jun 25, 2012</b></small>
+    </h4>
+    
+      <a class="tag" href="/blog/tag/#htaccess">.htaccess</a>
+    
+      <a class="tag" href="/blog/tag/#capistrano">capistrano</a>
+    
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</ul>
+
+<h3 id="fun">Fun</h3>
+<ul class="list-unstyled">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h4>
+      <a href="/fun/2015/08/24/trust-me-im-an-engineer.html"> Trust me, I'm an engineer </a>
+      <small><b>Aug 24, 2015</b></small>
+    </h4>
+    
+      <a class="tag" href="/blog/tag/#youtube">youtube</a>
+    
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</ul>
+
+<h3 id="gadgets">Gadgets</h3>
+<ul class="list-unstyled">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h4>
+      <a href="/gadgets/2015/08/25/m3d-print.html"> The Micro 3D Printer </a>
+      <small><b>Aug 25, 2015</b></small>
+    </h4>
+    
+      <a class="tag" href="/blog/tag/#3d-print">3d print</a>
+    
+      <a class="tag" href="/blog/tag/#m3d">m3d</a>
+    
+      <a class="tag" href="/blog/tag/#micro">micro</a>
+    
+      <a class="tag" href="/blog/tag/#kickstarter">kickstarter</a>
+    
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</ul>
+
+<h3 id="programming">Programming</h3>
+<ul class="list-unstyled">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h4>
+      <a href="/programming/2012/09/14/rubymine-and-ruby-1-9-x-debugging-get-it-working.html"> Rubymine and Ruby 1.9.x debugging - get it working </a>
+      <small><b>Sep 14, 2012</b></small>
+    </h4>
+    
+      <a class="tag" href="/blog/tag/#rubymine">rubymine</a>
+    
+      <a class="tag" href="/blog/tag/#debugger">debugger</a>
+    
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h4>
+      <a href="/programming/2012/06/19/git-2-git-migration-script.html"> Git 2 git migration script </a>
+      <small><b>Jun 19, 2012</b></small>
+    </h4>
+    
+      <a class="tag" href="/blog/tag/#git">git</a>
+    
+      <a class="tag" href="/blog/tag/#git-migration">git migration</a>
+    
+      <a class="tag" href="/blog/tag/#git2git">git2git</a>
+    
+      <a class="tag" href="/blog/tag/#ruby">ruby</a>
+    
+  </li>
+  
+  
+  
+  <li>
+    <h4>
+      <a href="/programming/2012/06/18/brakeman-rails-security-analytics-tool.html"> Brakeman - Rails security analytics tool </a>
+      <small><b>Jun 18, 2012</b></small>
+    </h4>
+    
+      <a class="tag" href="/blog/tag/#analysis">analysis</a>
+    
+      <a class="tag" href="/blog/tag/#audit">audit</a>
+    
+      <a class="tag" href="/blog/tag/#rails">rails</a>
+    
+      <a class="tag" href="/blog/tag/#security">security</a>
+    
+  </li>
+  
+  
+  
+  
+  
+  <li>
+    <h4>
+      <a href="/programming/2012/04/24/git-rails-rcov-jenkins-super-simple-ci-continuous-integration.html"> GIT + Rails + Rcov + Jenkins = Continuous Integration </a>
+      <small><b>Apr 24, 2012</b></small>
+    </h4>
+    
+      <a class="tag" href="/blog/tag/#ci">ci</a>
+    
+      <a class="tag" href="/blog/tag/#git-hooks">git hooks</a>
+    
+      <a class="tag" href="/blog/tag/#hudson">hudson</a>
+    
+      <a class="tag" href="/blog/tag/#rails">rails</a>
+    
+      <a class="tag" href="/blog/tag/#rcov">rcov</a>
+    
+  </li>
+  
+  
+  
+  <li>
+    <h4>
+      <a href="/programming/2012/04/21/rails-3-1-devise_for-breaks-dbmigrate-fix-6.html"> Rails 3.1 devise_for breaks db:migrate - fix </a>
+      <small><b>Apr 21, 2012</b></small>
+    </h4>
+    
+      <a class="tag" href="/blog/tag/#devise">devise</a>
+    
+      <a class="tag" href="/blog/tag/#rails">rails</a>
+    
+  </li>
+  
+  
+  
+  <li>
+    <h4>
+      <a href="/programming/2012/04/20/install-node-js-on-centos-5-5.html"> Install Node.js on Centos 5.5 </a>
+      <small><b>Apr 20, 2012</b></small>
+    </h4>
+    
+      <a class="tag" href="/blog/tag/#centos">centos</a>
+    
+      <a class="tag" href="/blog/tag/#snippet">snippet</a>
+    
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h4>
+      <a href="/programming/2012/02/03/the-arrow-coding-pattern.html"> The Arrow - Coding Pattern?! </a>
+      <small><b>Feb 3, 2012</b></small>
+    </h4>
+    
+      <a class="tag" href="/blog/tag/#bad-code">bad code</a>
+    
+      <a class="tag" href="/blog/tag/#coding-pattern">coding pattern</a>
+    
+  </li>
+  
+  
+  
+  <li>
+    <h4>
+      <a href="/programming/2012/02/03/gitlabhq-gitolite-apache-passenger-and-centos-5-5.html"> Gitlabhq, Gitolite, Apache Passenger and Centos 5.5 </a>
+      <small><b>Feb 3, 2012</b></small>
+    </h4>
+    
+      <a class="tag" href="/blog/tag/#git">git</a>
+    
+      <a class="tag" href="/blog/tag/#gitlabhq">gitlabhq</a>
+    
+      <a class="tag" href="/blog/tag/#gitolite">gitolite</a>
+    
+  </li>
+  
+  
+  
+  <li>
+    <h4>
+      <a href="/programming/2012/01/26/easy-forking-with-git.html"> Easy forking with git </a>
+      <small><b>Jan 26, 2012</b></small>
+    </h4>
+    
+      <a class="tag" href="/blog/tag/#bash">bash</a>
+    
+      <a class="tag" href="/blog/tag/#git">git</a>
+    
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</ul>
+
+<h3 id="projects">Projects</h3>
+<ul class="list-unstyled">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h4>
+      <a href="/projects/2012/08/16/git-flow-cheatsheet.html"> Git flow cheatsheet </a>
+      <small><b>Aug 16, 2012</b></small>
+    </h4>
+    
+      <a class="tag" href="/blog/tag/#cheatsheet">cheatsheet</a>
+    
+      <a class="tag" href="/blog/tag/#git-flow">git-flow</a>
+    
+      <a class="tag" href="/blog/tag/#git">git</a>
+    
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h4>
+      <a href="/projects/2012/06/05/skills-my-latest-project.html"> Skills - my latest project </a>
+      <small><b>Jun 5, 2012</b></small>
+    </h4>
+    
+      <a class="tag" href="/blog/tag/#namics">namics</a>
+    
+      <a class="tag" href="/blog/tag/#skills">skills</a>
+    
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</ul>
+
+<h3 id="talks">Talks</h3>
+<ul class="list-unstyled">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h4>
+      <a href="/talks/2012/02/13/git-differences-to-subversion-branching-and-tooling.html"> Git - Differences to Subversion, branching and tooling </a>
+      <small><b>Feb 13, 2012</b></small>
+    </h4>
+    
+      <a class="tag" href="/blog/tag/#git">git</a>
+    
+      <a class="tag" href="/blog/tag/#subversion">Subversion</a>
+    
+      <a class="tag" href="/blog/tag/#tooling">tooling</a>
+    
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h4>
+      <a href="/talks/2011/11/22/git-why-how.html"> Git! Why? How? </a>
+      <small><b>Nov 22, 2011</b></small>
+    </h4>
+    
+      <a class="tag" href="/blog/tag/#git">git</a>
+    
+      <a class="tag" href="/blog/tag/#presentation">presentation</a>
+    
+  </li>
+  
+  
+  
+  
+  
+  <li>
+    <h4>
+      <a href="/talks/2011/11/22/clean-code-presentation-htgw-konstanz.html"> Clean Code presentation @ HTGW Konstanz </a>
+      <small><b>Nov 22, 2011</b></small>
+    </h4>
+    
+      <a class="tag" href="/blog/tag/#code">code</a>
+    
+      <a class="tag" href="/blog/tag/#presentation">presentation</a>
+    
+  </li>
+  
+  
+</ul>
+
+<h3 id="tools">Tools</h3>
+<ul class="list-unstyled">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h4>
+      <a href="/tools/2012/01/16/watch-folders-with-hazel.html"> Watch folders with Hazel! </a>
+      <small><b>Jan 16, 2012</b></small>
+    </h4>
+    
+      <a class="tag" href="/blog/tag/#osx">osx</a>
+    
+      <a class="tag" href="/blog/tag/#utility">utility</a>
+    
+  </li>
+  
+  
+  
+  <li>
+    <h4>
+      <a href="/tools/2011/12/22/daisydisk-analyse-your-disk-space.html"> DaisyDisk - Analyse your disk space </a>
+      <small><b>Dec 22, 2011</b></small>
+    </h4>
+    
+      <a class="tag" href="/blog/tag/#disk-tool">disk tool</a>
+    
+      <a class="tag" href="/blog/tag/#osx">osx</a>
+    
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</ul>
+
 
 <h3 id="no-category">No Category</h3>
 <ul class="list-unstyled">
-  {% for post in site.posts %}
-  {% unless post.category %}
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   <li>
     <h4>
-      <a href="{{ post.url }}"> {{ post.title }} </a>
-      <small>{{ post.date | date: '%b %-d, %Y' | prepend: '<b>' | append: '</b>' }}</small>
+      <a href="/2015/08/21/new-blog.html"> New layout, new host, new content </a>
+      <small><b>Aug 21, 2015</b></small>
     </h4>
-    {% for tag in post.tags %}
-    <a class="tag" href="/blog/tag/#{{ tag | slugify }}">{{ tag }}</a>
-    {% endfor %}
+    
   </li>
-  {% endunless %}
-  {% endfor %}
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h4>
+      <a href="/sql/2012/04/12/fix-wrong-utf-8-encodings-in-mysql-table.html"> Fix MySQL UTF-8 encoding </a>
+      <small><b>Apr 12, 2012</b></small>
+    </h4>
+    
+    <a class="tag" href="/blog/tag/#encoding">encoding</a>
+    
+    <a class="tag" href="/blog/tag/#fix">fix</a>
+    
+    <a class="tag" href="/blog/tag/#software">software</a>
+    
+    <a class="tag" href="/blog/tag/#sql-alter-table">sql alter table</a>
+    
+    <a class="tag" href="/blog/tag/#utf8">utf8</a>
+    
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h4>
+      <a href="/tools/2011/11/28/convert-mysql-dump-to-sqlite-format.html"> MySQL 2 SQLite </a>
+      <small><b>Nov 28, 2011</b></small>
+    </h4>
+    
+    <a class="tag" href="/blog/tag/#bash">bash</a>
+    
+    <a class="tag" href="/blog/tag/#mysql">mysql</a>
+    
+    <a class="tag" href="/blog/tag/#sql">sql</a>
+    
+    <a class="tag" href="/blog/tag/#sqlite">sqlite</a>
+    
+  </li>
+  
+  
+  
+  
+  
+  <li>
+    <h4>
+      <a href="/2011/11/22/first-post.html"> First Post </a>
+      <small><b>Nov 22, 2011</b></small>
+    </h4>
+    
+  </li>
+  
+  
+  
+  
 </ul>
 
 </div>
+
+
+		</div>
+
+		<footer>
+
+			
+
+  <div class="meta">
+
+    <div class="author" data-animation="fadeInUp">
+                  
+      <span class="title">Written by</span>
+
+      <h4>Daniel Kummer</h4>
+      <p>I'm a software engineer who also enjoys lots of other things like diving, tinkering, photography, whiskey and much more...</p>
+
+      
+        <ul>
+          <li><a href="https://twitter.com/code_n_fold" title="Twitter" class="icon twitter">Twitter</a></li>
+          <li><a href="https://www.facebook.com/daniel.kummer" title="Facebook" class="icon facebook">Facebook</a></li>
+          
+          <li><a href="https://www.linkedin.com/pub/daniel-kummer/58/344/528" title="LinkedIn" class="icon linkedin">LinkedIn</a></li>
+          
+          
+          
+          <li><a href="feed://code-n-fold.com/feed.xml" title="RSS" class="icon rss">RSS</a></li>
+        </ul>
+      
+
+    </div>
+
+    <div class="share" data-animation="fadeInUp">
+                  
+      <span class="title">Share</span>
+
+      <ul>
+        <li><a href="https://twitter.com/home?status=Code%20and%20Origami%20%E2%80%93%20Software%20Engineering%20http://www.code-n-fold.com/categories.html" title="Tweet" class="icon twitter">Tweet</a></li>
+        <li><a href="https://www.facebook.com/sharer/sharer.php?u=http://www.code-n-fold.com/categories.html" title="Like" class="icon facebook">Like</a></li>
+        <li><a href="https://plus.google.com/share?url=http://www.code-n-fold.com/categories.html" title="+1" class="icon google">+1</a></li>
+      </ul>
+
+    </div>
+
+  </div>
+
+
+
+			
+
+			
+
+
+
+		</footer>
+
+	</article>
+
+</section>
+
+
+
+    
+
+      <footer data-animation="fadeInUp">
+        <div class="copyright">
+          <b>Copyright 2015 Daniel Kummer.</b> All Rights Reserved.
+        	<a href="mailto:daniel.kummer@gmail.com" title="Send E-Mail">Contact</a>
+        	<a href="/feed.xml" title="Subscribe to Feed">RSS</a>
+        </div>
+      </footer>
+      
+    
+
+    <script type="application/ld+json">
+    { "@context" : "http://schema.org",
+      "@type" : "Person",
+      "name" : "Daniel Kummer",
+      "url" : "http://www.code-n-fold.com",
+      "sameAs" : [ "http://www.facebook.com/daniel.kummer",
+        "http://www.twitter.com/code_n_fold"]
+    }
+    </script>
+    
+    <script src="/assets/jquery-2.1.1.min.js"></script>
+    <script src="/assets/viewportchecker.js"></script>
+    <script src="/assets/scripts.js"></script>
+
+  </body>
+
+</html>

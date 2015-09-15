@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <title>Gitlabhq, Gitolite, Apache Passenger and Centos 5.5</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Code and Origami – Software Engineering" />
+
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="code 'n fold" />
+    <meta property="og:title" content="Gitlabhq, Gitolite, Apache Passenger and Centos 5.5" />
+    <meta property="og:description" content="Code and Origami – Software Engineering" />
+    <meta property="og:url" content="http://www.code-n-fold.com/programming/2012/02/03/gitlabhq-gitolite-apache-passenger-and-centos-5-5.html" />
+    <meta property="og:image" content="http://www.code-n-fold.com/images/" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Gitlabhq, Gitolite, Apache Passenger and Centos 5.5" />
+    <meta name="twitter:url" content="http://www.code-n-fold.com/programming/2012/02/03/gitlabhq-gitolite-apache-passenger-and-centos-5-5.html" />
+    <meta name="twitter:image" content="http://www.code-n-fold.com/images/" />
+    <meta name="twitter:site" content="@code_n_fold" />
+    <meta name="twitter:creator" content="@code_n_fold" />
+    
+    <meta name="twitter:description" content="Code and Origami – Software Engineering">
+    
+    
+
+
+    <link rel="alternate" href="http://www.code-n-fold.com/feed.xml" type="application/rss+xml" title="Gitlabhq, Gitolite, Apache Passenger and Centos 5.5" />
+    <link rel="canonical" href="/programming/2012/02/03/gitlabhq-gitolite-apache-passenger-and-centos-5-5.html" />
+
+    <link rel="stylesheet" href="/assets/normalize.css" />
+    <link rel="stylesheet" href="/assets/animate.css" />
+    <link rel="stylesheet" href="/assets/styles.css" />
+    <link rel="stylesheet" href="/assets/custom.css" />
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-66459836-1', 'auto');
+        ga('send', 'pageview');
+      </script>
+    
+
+  </head>
+
+  <body>
+
+    <header data-animation="fadeInDownBig">
+
+      <a href="/" title="Back to Homepage" class="logo">code <i>'n</i> fold</a>
+
+      
+      
+
+      <button class="toggle">Menu</button>
+      <nav>
+        <ul>
+          <li><a href="/" title="Home">Home</a></li>
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              <li><a href="/about.html" title="About">About</a></li>
+            
+          
+            
+              <li><a href="/projects.html" title="Projects">Projects</a></li>
+            
+          
+            
+              <li><a href="/archive/" title="Archive">Archive</a></li>
+            
+          
+            
+              <li><a href="/categories.html" title="Categories">Categories</a></li>
+            
+          
+
+        <hr/>
+
+          
+            
+              <li><a href="/tools/2011/11/28/convert-mysql-dump-to-sqlite-format.html" title="MySQL 2 SQLite">MySQL 2 SQLite</a></li>
+            
+          
+            
+              <li><a href="/sql/2012/04/12/fix-wrong-utf-8-encodings-in-mysql-table.html" title="Fix MySQL UTF-8 encoding">Fix MySQL UTF-8 encoding</a></li>
+            
+          
+            
+              <li><a href="/deployment/2012/06/25/secure-your-staging-environments-with-capistrano-and-htaccess.html" title="Capistrano and .htaccess">Capistrano and .htaccess</a></li>
+            
+          
+            
+              <li><a href="/projects/2012/08/16/git-flow-cheatsheet.html" title="Git flow cheatsheet">Git flow cheatsheet</a></li>
+            
+          
+        </ul>
+      </nav>
+
+    </header>
+
+
+
+	
+
+
+<section class="content">
+
+	<article>
+
+		<header class="gradient-1" data-animation="fadeInDownBig">
+
+			
+
+<div class="excerpt">
+
+  
+    <span class="title">10 minutes</span>
+  
+
+	
+
+		
+			<h1><a href="/programming/2012/02/03/gitlabhq-gitolite-apache-passenger-and-centos-5-5.html" title="Gitlabhq, Gitolite, Apache Passenger and Centos 5.5">Gitlabhq, Gitolite, Apache Passenger and Centos 5.5</a></h1>
+		
+
+
+	
+
+	<p>Getting the great project <a href="https://gitlabhq.com/">gitlabhq</a>, a web frontend for git based on gitolite and rails to run under Centos 5.5 can be quite frustrating but I managed to get the whole system up and running.</p>
+
+	
+
+		
+
+			<span class="meta">Published <b>Feb 3, 2012</b>
+
+        
+          in <b>programming</b>
+        
+
+        
+          with tags:
+        
+
+        
+          <a class="tag" href="/tags/git">git</a>
+        
+          <a class="tag" href="/tags/gitlabhq">gitlabhq</a>
+        
+          <a class="tag" href="/tags/gitolite">gitolite</a>
+        
+      </span>
+
+		
+
+	
+
+</div>
+
+
+	<a href="#" title="Scroll" class="scroll">Scroll</a>
+
+
+
+		</header>
+
+		<div class="body" data-animation="fadeInUp">
+
+			<p>To get started I’ve read the installation manual on the gitlabhq wiki page as well as serveral other blogs and resources in order to cope with the bugging Centos 5.5 problems and outdated packages. (I’ll admit I don’t like this OS very much…)</p>
+
+<p>There are quite a lot of tutorials and manuals got get gitlabhq working but most of them are either not intended for CentOS or don’t provide help for certain pitfalls…Here I’ll provide a step by step explanation on how I did it.</p>
+
+<h2 id="target-configuration">Target Configuration</h2>
+
+<p>My intended target configuration for the gitlabhq server is as follows:</p>
+
+<ul>
+  <li>git 1.7.4.1</li>
+  <li>ruby 1.9.2</li>
+  <li>mysql 5.5.20</li>
+  <li>redis 2.4.6</li>
+  <li>apache 2</li>
+  <li>mod_passenger 3.0.11</li>
+  <li>gitlabhq 2.1 stable</li>
+</ul>
+
+<p>I use mysql as database backend instead of the pre-configured sqlite3 setup gitlabhq uses by default. It’s just the better choice for a production environment.
+Preinstalled software</p>
+
+<p>I expect you’ve got a Centos 5.5 System up and running with the following software preinstalled:</p>
+
+<ul>
+  <li>apache2</li>
+  <li>git 1.7.x</li>
+  <li>python 2.4</li>
+  <li>mysql 5.5</li>
+</ul>
+
+<h2 id="installation-and-configuration">Installation and Configuration</h2>
+
+<p>So let’s start with the installation and configuration process. If you follow the guide top-down you’ll have a running gitlabhq setup in notime!</p>
+
+<p>We start by installing the overall prerequired CentOS and source packages.</p>
+
+<h3 id="centos-packages">CentOS Packages</h3>
+
+<p>Firstly install required CentOS packages like the openssh-server and other packages required for the building or installation processes.</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">sudo yum install -y git openssh-server curl-devel openssl-devel httpd-devel apr-devel apr-util-devel libzlib-ruby zlib-devel python-devel python-setuptools libicu-devel gcc-c++ gcc ruby-devel libxml2 libxml2-devel libxslt libxslt-devel</code></pre></div>
+
+<h3 id="source-packages">Source Packages</h3>
+
+<h4 id="libyaml">Libyaml</h4>
+
+<p>You have to compile the yaml library directly from source, there are no current packages available for CentOS.</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">wget http://pyyaml.org/download/libyaml/yaml-0.1.4.tar.gz
+tar xzvf yaml-0.1.4.tar.gz
+<span class="nb">cd </span>yaml-0.1.4
+./configure --prefix<span class="o">=</span>/usr/local
+make <span class="o">&amp;&amp;</span> make install</code></pre></div>
+
+<h4 id="redis">Redis</h4>
+
+<p>It’s the same with the redis key-value store, compile it from source to get a current version, redis is used by gitlabhq.</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">wget http://redis.googlecode.com/files/redis-2.4.6.tar.gz
+tar xvfz redis-2.4.6.tar.gz
+<span class="nb">cd </span>redis-2.4.6
+make <span class="o">&amp;&amp;</span> sudo make install</code></pre></div>
+
+<p>There are sed scripts available to customize the redis standard configuration, just execute the command line statements below. It enables the redis daemon process and outputs logs to /var/log/redis.log:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">mkdir /etc/redis /var/lib/redis
+sed -e <span class="s2">&quot;s/^daemonize no$/daemonize yes/&quot;</span> -e <span class="s2">&quot;s/^dir \.\//dir \/var\/lib\/redis\//&quot;</span> -e <span class="s2">&quot;s/^loglevel debug$/loglevel notice/&quot;</span> -e <span class="s2">&quot;s/^logfile stdout$/logfile \/var\/log\/redis.log/&quot;</span> redis.conf &gt; /etc/redis/redis.conf</code></pre></div>
+
+<p>Fortunately there is an init script for redis and Centos available, you can get it from github.com:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">wget https://raw.github.com/gist/257849/9f1e627e0b7dbe68882fa2b7bdb1b2b263522004/redis-server
+sed -i <span class="s2">&quot;s/usr\/local\/sbin\/redis/usr\/local\/bin\/redis/&quot;</span> redis-server
+chmod u+x redis-server
+mv redis-server /etc/init.d
+/sbin/chkconfig --add redis-server
+/sbin/chkconfig --level <span class="m">345</span> redis-server on
+/sbin/service redis-server start</code></pre></div>
+
+<p>** Testing Redis Installation**</p>
+
+<p>Test the redis installation by opening a telnet connection and setting/reading a key value pair:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">telnet 127.0.0.1 6379
+<span class="nb">set </span>attitude:today <span class="s2">&quot;happy&quot;</span>
+get attitude:today</code></pre></div>
+
+<h4 id="installation-resque-post-receive-git-hooks">Installation Resque Post-Receive Git Hooks</h4>
+
+<p>If you’d like to use the Redis/Reque post-receive hooks with gitlab, the following command starts resque detached from the current terminal session:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">nohup bundle <span class="nb">exec </span>rake environment resque:work <span class="nv">QUEUE</span><span class="o">=</span>* <span class="nv">VVERBOSE</span><span class="o">=</span><span class="m">1</span> <span class="nv">RAILS_ENV</span><span class="o">=</span>production <span class="nv">PIDFILE</span><span class="o">=</span>tmp/pids/resque_worker_QUEUE.pid</code></pre></div>
+
+<h4 id="sqlite3">Sqlite3</h4>
+
+<p>Although I’m not using Sqlite3 in my configuration I’ll explain the installation process anyway in case you stick with Sqlite3 instead of MySQL for the database backend. As expected, the Centos 5.5 Sqlite package is outdated and has to be compiled from source:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">wget http://www.sqlite.org/sqlite-autoconf-3070800.tar.gz
+tar -zxvf sqlite-autoconf-3070800.tar.gz
+<span class="nb">cd </span>sqlite-autoconf-3070800
+./configure --prefix<span class="o">=</span>/opt/sqlite3 <span class="o">&amp;&amp;</span> make <span class="o">&amp;&amp;</span> make install</code></pre></div>
+
+<p>To finish the setup process the new shared libraries have to be copied to the libraries search path:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">cp -p /opt/sqlite3/lib/libsqlite3.so.0 /usr/lib64
+cp -p /opt/sqlite3/lib/libsqlite3.so.0 /usr/lib</code></pre></div>
+
+<h4 id="ruby">Ruby</h4>
+
+<p>As we know by now the way to go is to compile the software from source to get a current version, it’s no different for our beloved Ruby…</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">wget http://ftp.ruby-lang.org/pub/ruby/1.9/ruby-1.9.2-p290.tar.gz
+tar xzvf ruby-1.9.2-p290.tar.gz
+<span class="nb">cd </span>ruby-1.9.2-p290
+./configure --prefix<span class="o">=</span>/usr/local --enable-shared --disable-install-doc --with-opt-dir<span class="o">=</span>/usr/local/lib
+make <span class="o">&amp;&amp;</span> make install</code></pre></div>
+
+<p>Add the ruby binary path (/usr/local/bin) to the gobal paths:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s1">&#39;pathmunge /usr/local/bin&#39;</span> &gt; /etc/profile.d/ruby.sh
+chmod +x /etc/profile.d/ruby.sh</code></pre></div>
+
+<p>And update the gem system, just to be sure…</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">gem update --system</code></pre></div>
+
+<h4 id="gitolite">Gitolite</h4>
+
+<p>The gitolite installation manuals can be quite perplexing and complicated. But if you get down to it the installation process is quite straight forward:</p>
+
+<p>Create a new user to be used by gitolite</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">useradd --shell /bin/bash --comment <span class="s1">&#39;git version control&#39;</span> -m git</code></pre></div>
+
+<p>Create a corresponding group and add the newly created user to it</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">usermod -a -G git git</code></pre></div>
+
+<p>Generate an ssh-key for the newly created git user without a password!</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">su git
+ssh-keygen -t rsa</code></pre></div>
+
+<p>Copy the created key to the git user home directory replacing the default name with the username</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">cp .ssh/id_rsa.pub git.pub</code></pre></div>
+
+<p>Clone the gitolite repository</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">sudo -u git -H git clone git://github.com/gitlabhq/gitolite /home/git/gitolite</code></pre></div>
+
+<p>Install gitolite by using the earlier copied git public key for the initial setup</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">sudo -u git -H /home/git/gitolite/src/gl-system-install
+sudo -u git -H sh -c <span class="s2">&quot;PATH=/home/git/bin:$PATH; gl-setup ~/git.pub&quot;</span></code></pre></div>
+
+<p>During the installation you’re prompted to edit the gitolite config file. Replace the repository umask value as described below</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$REPO_UMASK</span> <span class="o">=</span> 0007<span class="p">;</span></code></pre></div>
+
+<p>As the last step fix the repository directory permissions and owner</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">sudo chmod -R g+rwX /home/git/repositories/
+sudo chown -R git:git /home/git/repositories/</code></pre></div>
+
+<h3 id="testing-gitolite">Testing Gitolite</h3>
+
+<p>This step is mandatory in order to get the localhost entry in the ssh known_keys file made</p>
+
+<p>To test the gitolite installation clone the gitolite admin repository on the server into the tmp folder.</p>
+
+<p>You have to do this using the git user, only this user has its public key in gitolite installed at the moment.</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">git clone git@localhost:gitolite-admin.git /tmp/gitolite-admin</code></pre></div>
+
+<p>If everything is in order you can delete the cloned repository afterwards…</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">rm -rf /tmp/gitolite-admin</code></pre></div>
+
+<h4 id="gitlabhq">Gitlabhq</h4>
+
+<p>Wer’re finally getting to the gitlabhq installation. Let’s start with the prerequired python and ruby libraries:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">easy_install pip
+sudo pip install pygments
+sudo gem install bundler</code></pre></div>
+
+<p>If you’re using Sqlite3 as db backend, install the sqlite3 gem with the following command</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">gem install sqlite3 -v <span class="s1">&#39;1.3.4&#39;</span> -- --with-sqlite3-dir<span class="o">=</span>/opt/sqlite3</code></pre></div>
+
+<p>This is also a good chance to install the by gitlabhq required charlock holmes gem</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">sudo gem install charlock_holmes -v <span class="s1">&#39;0.6.8&#39;</span></code></pre></div>
+
+<p>If you’re getting SSL certificate verification errors use the no verify global variable and try the gem install command again:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">export </span><span class="nv">GIT_SSL_NO_VERIFY</span><span class="o">=</span><span class="nb">true</span></code></pre></div>
+
+<p>Now clone the gitlab repository and install the gems (as user git)</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">c
+d
+git clone -b stable git://github.com/gitlabhq/gitlabhq.git
+<span class="nb">cd </span>gitlabhq</code></pre></div>
+
+<h4 id="mysql-backend">MySQL Backend</h4>
+
+<p>If you’re using the preconfigured Sqlite3 backend you can skip this step and proceed directly with the bundle install command further below.
+But if you decide to use MySQL as database backend you’ll have to make some small changes to the gitlabhq configuration as well as initialize the mysql database and add a query user for gitlabhq.
+First, edit the config/database.yml file and configure a production environment similar to this:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">production:
+  adapter: mysql2
+  username: gitlab
+  password: <span class="s2">&quot;your_db_password&quot;</span>
+  host: localhost
+  database: gitlab</code></pre></div>
+
+<p>Second, you have to add the mysql2 gem to the Gemfile in the gitlabhq folder (you can remove the sqlite3 gem dependency)</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">gem <span class="s2">&quot;mysql2&quot;</span></code></pre></div>
+
+<p>To be sure it works, install the mysql2 gem separately:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">gem install mysql2</code></pre></div>
+
+<p>I expect you have a MySQL server up and running that’s why I’m only describing the initial database setup.
+Login into the mysql client using the root user</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">mysql -u root -p</code></pre></div>
+
+<p>Create a user and a database for gitlabhq</p>
+
+<div class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">CREATE</span> <span class="k">USER</span> <span class="n">gitlab</span><span class="o">@</span><span class="n">localhost</span> <span class="n">IDENTIFIED</span> <span class="k">BY</span> <span class="s1">&#39;here_is_the_db_password&#39;</span><span class="p">;</span>
+<span class="k">CREATE</span> <span class="k">DATABASE</span> <span class="n">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">gitlab</span><span class="p">;</span>
+<span class="k">GRANT</span> <span class="k">ALL</span> <span class="k">PRIVILEGES</span> <span class="k">ON</span> <span class="n">gitlab</span> <span class="p">.</span> <span class="o">*</span> <span class="k">TO</span> <span class="n">gitlab</span><span class="o">@</span><span class="n">localhost</span><span class="p">;</span></code></pre></div>
+
+<p>Install bundle, load tables and initial data</p>
+
+<p>Now proceed with the finishing touch; install the bundles and execute the initial db setup</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">bundle install --without development <span class="nb">test</span>
+bundle <span class="nb">exec </span>rake db:setup <span class="nv">RAILS_ENV</span><span class="o">=</span>production
+bundle <span class="nb">exec </span>rake db:seed_fu <span class="nv">RAILS_ENV</span><span class="o">=</span>production</code></pre></div>
+
+<h4 id="apache2-modpassenger">Apache2 mod_passenger</h4>
+
+<p>I’m against running gitlabhq using the rails provided server so I’ll be using passenger instead…
+Let’s assume you’re using a working apache2 installation with the module configurations stored under /etc/httpd/conf.d and a vhost setup with the vhost configurations stored under /etc/httpd/hosts.</p>
+
+<p>Start by installing the passenger gem and passenger itself</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">gem install passenger
+passenger-install-apache2-module</code></pre></div>
+
+<p>Copy the generated loadmodule statements to a new module file and store it under /etc/httpd/conf.d/passenger.conf</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">LoadModule passenger_module /usr/local/lib/ruby/gems/1.9.1/gems/passenger-3.0.11/ext/apache2/mod_passenger.so
+PassengerRoot /usr/local/lib/ruby/gems/1.9.1/gems/passenger-3.0.11
+PassengerRuby /usr/local/bin/ruby</code></pre></div>
+
+<p>Here’s an example of a working vhost configuration, you can copy paste and adjust it to your needs:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">ServerName gitlabhq.yourhost.com
+DocumentRoot /home/git/gitlabhq/public
+
+    AllowOverride All
+    Options -MultiViews
+
+CustomLog logs/gitlab/access combined
+ErrorLog  logs/gitlab/error
+ServerAdmin info@yourhost.com
+RackBaseURI /
+RackEnv production</code></pre></div>
+
+<p>It’s extremely important to add the apache user to the git user group to prevent access problems:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">usermod -a -G git apache</code></pre></div>
+
+<h2 id="resources">Resources</h2>
+
+<p>I’ve used the following web resources to help me with my installation:</p>
+
+<p>I’ve used the following web resources to help me with my installation:</p>
+<table>
+<tbody>
+<tr>
+<th>URL</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><a href="https://github.com/gitlabhq/gitlabhq/wiki/Ubuntu.stable" rel="nofollow">Gitlabhq</a></td>
+<td>Ubuntu linux installation tutorial</td>
+</tr>
+<tr>
+<td><a href="https://github.com/gitlabhq/gitlabhq/wiki/Gitolite" rel="nofollow">Gitolite (Gitlabhq)</a></td>
+<td>Tutorial for gitolite installation on ubuntu linux</td>
+</tr>
+<tr>
+<td><a href="https://sites.google.com/site/senawario/home/gitolite-tutorial" rel="nofollow">Gitolite Installation Tutorial</a></td>
+<td>In depth installation tutorial for gitolite</td>
+</tr>
+<tr>
+<td><a href="http://www.ebrueggeman.com/blog/install-redis-centos-56" rel="nofollow">Redis</a></td>
+<td>Installation tutorial for redis on CentOS 5.6</td>
+</tr>
+<tr>
+<td><a href="http://nokogiri.org/tutorials/installing_nokogiri.html" rel="nofollow">Nokogiri</a></td>
+<td>Installation tutorial for Nokogiri</td>
+</tr>
+<tr>
+<td><a href="http://www.shiftedbytes.com/2011/04/install-ruby-192-passenger-on-centos-55.html" rel="nofollow">Ruby 1.9.2 on CentOS 5.5</a></td>
+<td>Installation tutorial for Ruby and Passenger on CentOS 5.5</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="pitfalls">Pitfalls</h2>
+
+<p>One sad thing about gitlabhq is the overall 500 error page. You won’t get detailed  information on what went wrong it just says “there was a problem, check your config”.</p>
+
+<p>The following thing is essential if you’re having problem like for example creating new repositories and using mod_passenger:</p>
+
+<p>The user running passenger must have write access to the gitolite repository folder! If he doesn’t have the permissions – fail!</p>
+
+<p>For general problems try deleting the lockfiles generated by gitlabhq in the system temp directory:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">sudo rm -rf /tmp/gitlabhq-gitolite*</code></pre></div>
+
+<h2 id="final-notes">Final Notes</h2>
+
+<p>I’m using a slightly different setup in our company mainly because I’ve forked the gitlabhq project to make some company-related changes. In order to speed up development and deployment I’m using capistrano to deploy my gitlabhq fork to the server. I’m not posting information about it here because it’s a special setup and won’t be useful to you if you’re not actively making changes to gitlabhq.</p>
+
+<p>So that’s it with this you should get gitlabhq working on your CentOS 5.5 system. If you’ve got problem or comments feel free to leave them here…</p>
+
+
+		</div>
+
+		<footer>
+
+			
+
+  <div class="meta">
+
+    <div class="author" data-animation="fadeInUp">
+                  
+      <span class="title">Written by</span>
+
+      <h4>Daniel Kummer</h4>
+      <p>I'm a software engineer who also enjoys lots of other things like diving, tinkering, photography, whiskey and much more...</p>
+
+      
+        <ul>
+          <li><a href="https://twitter.com/code_n_fold" title="Twitter" class="icon twitter">Twitter</a></li>
+          <li><a href="https://www.facebook.com/daniel.kummer" title="Facebook" class="icon facebook">Facebook</a></li>
+          
+          <li><a href="https://www.linkedin.com/pub/daniel-kummer/58/344/528" title="LinkedIn" class="icon linkedin">LinkedIn</a></li>
+          
+          
+          
+          <li><a href="feed://code-n-fold.com/feed.xml" title="RSS" class="icon rss">RSS</a></li>
+        </ul>
+      
+
+    </div>
+
+    <div class="share" data-animation="fadeInUp">
+                  
+      <span class="title">Share</span>
+
+      <ul>
+        <li><a href="https://twitter.com/home?status=Code%20and%20Origami%20%E2%80%93%20Software%20Engineering%20http://www.code-n-fold.com/programming/2012/02/03/gitlabhq-gitolite-apache-passenger-and-centos-5-5.html" title="Tweet" class="icon twitter">Tweet</a></li>
+        <li><a href="https://www.facebook.com/sharer/sharer.php?u=http://www.code-n-fold.com/programming/2012/02/03/gitlabhq-gitolite-apache-passenger-and-centos-5-5.html" title="Like" class="icon facebook">Like</a></li>
+        <li><a href="https://plus.google.com/share?url=http://www.code-n-fold.com/programming/2012/02/03/gitlabhq-gitolite-apache-passenger-and-centos-5-5.html" title="+1" class="icon google">+1</a></li>
+      </ul>
+
+    </div>
+
+  </div>
+
+
+
+			
+  <div class="comments" data-animation="fadeInUp">
+    
+    <span class="title">Comments</span>
+    <div id="disqus_thread"></div>
+
+    <script type="text/javascript">
+      var disqus_shortname = 'code-n-fold';
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+
+    <noscript>
+      Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+    </noscript>
+
+  </div>
+
+
+			
+
+	<div class="pagination" data-animation="fadeInUp">
+		<a href="/programming/2012/01/26/easy-forking-with-git.html" title="View Older Posts" class="button older">Older</a>
+		<a href="/programming/2012/02/03/the-arrow-coding-pattern.html" title="View Newer Posts" class="button newer">Newer</a>
+	</div>
+
+
+
+
+
+		</footer>
+
+	</article>
+
+</section>
+
+
+
+	
+		
+	
+
+	
+		
+	
+
+	<section class="teaser gradient-1" data-animation="fadeInUp">
+	      
+		<div class="excerpt">
+	            
+			<span class="title">1 minute</span>
+
+			
+				<h1><a href="/programming/2012/01/26/easy-forking-with-git.html" title="Easy forking with git">Easy forking with git</a></h1>
+			
+
+			<p>Did you ever wanted to fork a project but weren't exactly sure about handling updates from the master repository?</p>
+
+			
+				<span class="meta">Published <b>Jan 26, 2012</b> in <b>programming</b></span>
+			
+
+		</div>
+
+	</section>
+
+
+
+    
+
+      <footer data-animation="fadeInUp">
+        <div class="copyright">
+          <b>Copyright 2015 Daniel Kummer.</b> All Rights Reserved.
+        	<a href="mailto:daniel.kummer@gmail.com" title="Send E-Mail">Contact</a>
+        	<a href="/feed.xml" title="Subscribe to Feed">RSS</a>
+        </div>
+      </footer>
+      
+    
+
+    <script type="application/ld+json">
+    { "@context" : "http://schema.org",
+      "@type" : "Person",
+      "name" : "Daniel Kummer",
+      "url" : "http://www.code-n-fold.com",
+      "sameAs" : [ "http://www.facebook.com/daniel.kummer",
+        "http://www.twitter.com/code_n_fold"]
+    }
+    </script>
+    
+    <script src="/assets/jquery-2.1.1.min.js"></script>
+    <script src="/assets/viewportchecker.js"></script>
+    <script src="/assets/scripts.js"></script>
+
+  </body>
+
+</html>

@@ -1,20 +1,540 @@
----
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{{ site.name | xml_escape }}</title>
-    <description>{{ site.description | xml_escape }}</description>
-    <link>{{ site.url }}</link>
-    <atom:link href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml" />
-    {% for post in site.posts limit:10 %}
+    <title>code &lt;i&gt;&#39;n&lt;/i&gt; fold</title>
+    <description>Code and Origami – Software Engineering</description>
+    <link>http://www.code-n-fold.com</link>
+    <atom:link href="http://www.code-n-fold.com/feed.xml" rel="self" type="application/rss+xml" />
+    
       <item>
-        <title>{{ post.title | xml_escape }}</title>
-        <description>{{ post.content | xml_escape }}</description>
-        <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
-        <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
-        <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
+        <title>Useless Box - Sneak Peek</title>
+        <description>&lt;h2 id=&quot;comming-soon&quot;&gt;Comming soon…&lt;/h2&gt;
+
+&lt;p&gt;I’m off to vacation soon but as one of my last actions is this sneak peek of my latest dyi project.&lt;/p&gt;
+
+&lt;p&gt;More details will follow…&lt;/p&gt;
+
+&lt;div class=&quot;media image&quot; data-animation=&quot;fadeInUp&quot;&gt;
+
+	
+		&lt;img src=&quot;/images/useless-box/sneak-peek.png&quot; alt=&quot;Made out of an old MiniDisc Box... ...and some other stuff ;)&quot; /&gt;
+	
+
+	
+		&lt;div class=&quot;caption&quot; data-animation=&quot;fadeInRightBig&quot;&gt;
+		  
+		  
+		  	&lt;h4&gt;Made out of an old MiniDisc Box... ...and some other stuff ;)&lt;/h4&gt;
+		  
+
+		  
+
+		  
+
+		&lt;/div&gt;
+	
+
+&lt;/div&gt;
+
+&lt;p&gt;And I’m off…&lt;/p&gt;
+</description>
+        <pubDate>Tue, 15 Sep 2015 00:00:00 +0200</pubDate>
+        <link>http://www.code-n-fold.com/diy/2015/09/15/useless-box-sneak-peek.html</link>
+        <guid isPermaLink="true">http://www.code-n-fold.com/diy/2015/09/15/useless-box-sneak-peek.html</guid>
       </item>
-    {% endfor %}
+    
+      <item>
+        <title>3D Print - Chinese dragon</title>
+        <description>&lt;p&gt;The most complex 3d print with the &lt;a class=&quot;external&quot; target=&quot;_blank&quot; href=&quot;http://printm3d.com/&quot;&gt;M3D Mico printer&lt;/a&gt; so far.
+It’s a &lt;a class=&quot;external&quot; target=&quot;_blank&quot; href=&quot;http://www.thingiverse.com/thing:16860&quot;&gt;chinese dragon&lt;/a&gt; scan from a bronze statue.&lt;/p&gt;
+
+&lt;h2 id=&quot;print-details&quot;&gt;Print Details&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Printed with &lt;a class=&quot;external&quot; target=&quot;_blank&quot; href=&quot;http://printm3d.com/&quot;&gt;M3D Mico printer&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a class=&quot;external&quot; target=&quot;_blank&quot; href=&quot;http://store.printm3d.com/#filaments_head_scroll&quot;&gt;Onyx Black PLA filament&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Medium Quality&lt;/li&gt;
+  &lt;li&gt;With support&lt;/li&gt;
+  &lt;li&gt;With raft&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;gallery&quot;&gt;Gallery&lt;/h2&gt;
+
+&lt;div class=&quot;media image&quot; data-animation=&quot;fadeInUp&quot;&gt;
+
+	
+		&lt;img src=&quot;/images/m3d-print/chinese-dragon-full.jpg&quot; alt=&quot;The colored model&quot; /&gt;
+	
+
+	
+		&lt;div class=&quot;caption&quot; data-animation=&quot;fadeInRightBig&quot;&gt;
+		  
+		  
+		  	&lt;h4&gt;The colored model&lt;/h4&gt;
+		  
+
+		  
+
+		  
+
+		&lt;/div&gt;
+	
+
+&lt;/div&gt;
+&lt;div class=&quot;media image&quot; data-animation=&quot;fadeInUp&quot;&gt;
+
+	
+		&lt;img src=&quot;/images/m3d-print/chinese-dragon-full-1.jpg&quot; alt=&quot;&quot; /&gt;
+	
+
+	
+
+&lt;/div&gt;
+&lt;div class=&quot;media image&quot; data-animation=&quot;fadeInUp&quot;&gt;
+
+	
+		&lt;img src=&quot;/images/m3d-print/chinese-dragon-full-horizontal.jpg&quot; alt=&quot;&quot; /&gt;
+	
+
+	
+
+&lt;/div&gt;
+&lt;div class=&quot;media image&quot; data-animation=&quot;fadeInUp&quot;&gt;
+
+	
+		&lt;img src=&quot;/images/m3d-print/chinese-dragon-close.jpg&quot; alt=&quot;&quot; /&gt;
+	
+
+	
+
+&lt;/div&gt;
+&lt;div class=&quot;media image&quot; data-animation=&quot;fadeInUp&quot;&gt;
+
+	
+		&lt;img src=&quot;/images/m3d-print/chinese-dragon-out-of-printer.jpg&quot; alt=&quot;Fresh out of the printer&quot; /&gt;
+	
+
+	
+		&lt;div class=&quot;caption&quot; data-animation=&quot;fadeInRightBig&quot;&gt;
+		  
+		  
+		  	&lt;h4&gt;Fresh out of the printer&lt;/h4&gt;
+		  
+
+		  
+
+		  
+
+		&lt;/div&gt;
+	
+
+&lt;/div&gt;
+</description>
+        <pubDate>Mon, 14 Sep 2015 00:00:00 +0200</pubDate>
+        <link>http://www.code-n-fold.com/3d%20print/2015/09/14/chinese-dragon.html</link>
+        <guid isPermaLink="true">http://www.code-n-fold.com/3d%20print/2015/09/14/chinese-dragon.html</guid>
+      </item>
+    
+      <item>
+        <title>3D Print - T-Rex Skull</title>
+        <description>&lt;p&gt;Probably one of the most printed 3d models out there…
+It’s also doable using the &lt;a class=&quot;external&quot; target=&quot;_blank&quot; href=&quot;http://printm3d.com/&quot;&gt;M3D Mico printer&lt;/a&gt; - if you scale down the model to 75% its original size.&lt;/p&gt;
+
+&lt;h2 id=&quot;print-details&quot;&gt;Print Details&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Printed with &lt;a class=&quot;external&quot; target=&quot;_blank&quot; href=&quot;http://printm3d.com/&quot;&gt;M3D Mico printer&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a class=&quot;external&quot; target=&quot;_blank&quot; href=&quot;http://store.printm3d.com/#filaments_head_scroll&quot;&gt;Onyx Black PLA filament&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Medium Quality&lt;/li&gt;
+  &lt;li&gt;With support&lt;/li&gt;
+  &lt;li&gt;With raft&lt;/li&gt;
+  &lt;li&gt;Size 75%&lt;/li&gt;
+  &lt;li&gt;Printed as four different parts&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;gallery&quot;&gt;Gallery&lt;/h2&gt;
+
+&lt;div class=&quot;media image&quot; data-animation=&quot;fadeInUp&quot;&gt;
+
+	
+		&lt;img src=&quot;/images/m3d-print/t-rex-full.jpg&quot; alt=&quot;The assembled model&quot; /&gt;
+	
+
+	
+		&lt;div class=&quot;caption&quot; data-animation=&quot;fadeInRightBig&quot;&gt;
+		  
+		  
+		  	&lt;h4&gt;The assembled model&lt;/h4&gt;
+		  
+
+		  
+
+		  
+
+		&lt;/div&gt;
+	
+
+&lt;/div&gt;
+&lt;div class=&quot;media image&quot; data-animation=&quot;fadeInUp&quot;&gt;
+
+	
+		&lt;img src=&quot;/images/m3d-print/t-rex-front.jpg&quot; alt=&quot;&quot; /&gt;
+	
+
+	
+
+&lt;/div&gt;
+&lt;div class=&quot;media image&quot; data-animation=&quot;fadeInUp&quot;&gt;
+
+	
+		&lt;img src=&quot;/images/m3d-print/t-rex-close.jpg&quot; alt=&quot;&quot; /&gt;
+	
+
+	
+
+&lt;/div&gt;
+&lt;div class=&quot;media image&quot; data-animation=&quot;fadeInUp&quot;&gt;
+
+	
+		&lt;img src=&quot;/images/m3d-print/t-rex-angle.jpg&quot; alt=&quot;&quot; /&gt;
+	
+
+	
+
+&lt;/div&gt;
+</description>
+        <pubDate>Tue, 08 Sep 2015 00:00:00 +0200</pubDate>
+        <link>http://www.code-n-fold.com/3d%20print/2015/09/08/t-rex.html</link>
+        <guid isPermaLink="true">http://www.code-n-fold.com/3d%20print/2015/09/08/t-rex.html</guid>
+      </item>
+    
+      <item>
+        <title>3D Print - Hand Of The King Pin from Game of Thrones</title>
+        <description>&lt;p&gt;Another 3d print which I painted after printing.&lt;/p&gt;
+
+&lt;h1 id=&quot;print-details&quot;&gt;Print Details&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Printed with &lt;a class=&quot;external&quot; target=&quot;_blank&quot; href=&quot;http://printm3d.com/&quot;&gt;M3D Mico printer&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a class=&quot;external&quot; target=&quot;_blank&quot; href=&quot;http://store.printm3d.com/#filaments_head_scroll&quot;&gt;Onyx Black PLA Filament&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Medium Quality&lt;/li&gt;
+  &lt;li&gt;With raft&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;media image&quot; data-animation=&quot;fadeInUp&quot;&gt;
+
+	
+		&lt;img src=&quot;/images/m3d-print/hand-of-the-king-pin.jpg&quot; alt=&quot;Colored using gold spray and weathered with black paint&quot; /&gt;
+	
+
+	
+		&lt;div class=&quot;caption&quot; data-animation=&quot;fadeInRightBig&quot;&gt;
+		  
+		  
+		  	&lt;h4&gt;Colored using gold spray and weathered with black paint&lt;/h4&gt;
+		  
+
+		  
+
+		  
+
+		&lt;/div&gt;
+	
+
+&lt;/div&gt;
+&lt;div class=&quot;media image&quot; data-animation=&quot;fadeInUp&quot;&gt;
+
+	
+		&lt;img src=&quot;/images/m3d-print/hand-of-the-king-pin-front.jpg&quot; alt=&quot;&quot; /&gt;
+	
+
+	
+
+&lt;/div&gt;
+</description>
+        <pubDate>Thu, 03 Sep 2015 00:00:00 +0200</pubDate>
+        <link>http://www.code-n-fold.com/3d%20print/2015/09/03/hand-of-the-king-pin.html</link>
+        <guid isPermaLink="true">http://www.code-n-fold.com/3d%20print/2015/09/03/hand-of-the-king-pin.html</guid>
+      </item>
+    
+      <item>
+        <title>3D Print - The cute octopus sd-card holder</title>
+        <description>&lt;p&gt;This is my first complex 3d print with the &lt;a class=&quot;external&quot; target=&quot;_blank&quot; href=&quot;http://printm3d.com/&quot;&gt;M3D Mico printer&lt;/a&gt;.
+It’s a &lt;a class=&quot;external&quot; target=&quot;_blank&quot; href=&quot;http://www.thingiverse.com/thing:230802&quot;&gt;modified version&lt;/a&gt; of the original &lt;a class=&quot;external&quot; target=&quot;_blank&quot; href=&quot;http://www.thingiverse.com/thing:27053/&quot;&gt;Cute Octopus Says Hello&lt;/a&gt; model by MakerBot.&lt;/p&gt;
+
+&lt;h2 id=&quot;print-details&quot;&gt;Print Details&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Printed with &lt;a class=&quot;external&quot; target=&quot;_blank&quot; href=&quot;http://printm3d.com/&quot;&gt;M3D Mico printer&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a class=&quot;external&quot; target=&quot;_blank&quot; href=&quot;http://store.printm3d.com/#filaments_head_scroll&quot;&gt;Crimson Red ABS Filament&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Medium Quality&lt;/li&gt;
+  &lt;li&gt;With support&lt;/li&gt;
+  &lt;li&gt;With raft&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;gallery&quot;&gt;Gallery&lt;/h2&gt;
+
+&lt;div class=&quot;media image&quot; data-animation=&quot;fadeInUp&quot;&gt;
+
+	
+		&lt;img src=&quot;/images/m3d-print/cute-octopus.jpg&quot; alt=&quot;The cleaned up model&quot; /&gt;
+	
+
+	
+		&lt;div class=&quot;caption&quot; data-animation=&quot;fadeInRightBig&quot;&gt;
+		  
+		  
+		  	&lt;h4&gt;The cleaned up model&lt;/h4&gt;
+		  
+
+		  
+
+		  
+
+		&lt;/div&gt;
+	
+
+&lt;/div&gt;
+</description>
+        <pubDate>Mon, 31 Aug 2015 00:00:00 +0200</pubDate>
+        <link>http://www.code-n-fold.com/3d%20print/2015/08/31/happy-octopus.html</link>
+        <guid isPermaLink="true">http://www.code-n-fold.com/3d%20print/2015/08/31/happy-octopus.html</guid>
+      </item>
+    
+      <item>
+        <title>The Micro 3D Printer</title>
+        <description>&lt;h2 id=&quot;tldr&quot;&gt;TL;DR&lt;/h2&gt;
+
+&lt;p&gt;If you’re looking for an affordable and easy to use 3d printer, the Micro 3D is the choice for you! (No, I’m not getting paid for saying this)&lt;/p&gt;
+
+&lt;h2 id=&quot;a-story-from-the-early-days&quot;&gt;A story from the early days…&lt;/h2&gt;
+
+&lt;p&gt;I’ve got some previous experience with 3d printers. I was among a group of working colleagues who all chipped in and bought the first MakerBot Cupcake CNC together. 
+If you remember the early &lt;a class=&quot;external&quot; target=&quot;_blank&quot; href=&quot;http://www.makerbot.com/&quot;&gt;MakerBot&lt;/a&gt; editions you know what early adaptors had to go through:&lt;/p&gt;
+
+&lt;p&gt;The printer was delivered as an assembly kit. You had to build, solder and calibrate it yourself. It took 5 of us and a whole day to get it built and working. 
+ Sadly the problems didn’t stop there, the printer was quite maintenance intensive, the software was bad and you had to accompany the whole printing process to make sure everything went well.
+ The resolution and print quality was also not comparable to nowadays printers.
+ Needless to say we basically all lost interest in the printer after a few months and since then it serves as a rather expensive dust-catcher in a cabinet somewhere…&lt;/p&gt;
+
+&lt;p&gt;My personal conclusion at that time:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Nice toy - but too cumbersome to actually use!&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;d-printing-reboot&quot;&gt;3D Printing Reboot&lt;/h2&gt;
+
+&lt;p&gt;It all started - as often - with a &lt;a class=&quot;external&quot; target=&quot;_blank&quot; href=&quot;https://www.kickstarter.com/projects/m3d/the-micro-the-first-truly-consumer-3d-printer&quot;&gt;Kickstarter campaign&lt;/a&gt;. 
+The promise made was a relatively cheap and easy to use consumer 3d printer. 
+They reeled me in with quite a few promises:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;No assembly required and easy to use&lt;/li&gt;
+  &lt;li&gt;Small and convenient form factor&lt;/li&gt;
+  &lt;li&gt;Comparably cheap price tag (the campaign price was 299 USD for one printer)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;These promises were enough for me to seriously consider backing the project - which I did in the end ;)&lt;/p&gt;
+
+&lt;h3 id=&quot;the-long-wait&quot;&gt;The Long Wait&lt;/h3&gt;
+
+&lt;p&gt;As it usually happens Kickstarter campaigns the team was unable to deliver the printers on time due to delays in the manufacturing  process. But this is to be expected with the complex hardware they had to produce and test as well as the sheer numbers of printers they had to deliver (about 10’000). 
+The whole campaign was very well communicated - there were always updates on the development and production progress as well as the different obstacles the makers encountered during the process.&lt;/p&gt;
+
+&lt;p&gt;I wish every campaign would get this level of attention from the initiators!&lt;/p&gt;
+
+&lt;h2 id=&quot;the-printer&quot;&gt;The Printer&lt;/h2&gt;
+
+&lt;p&gt;I’ve got the printer for about a month now - which allows me to give a few first impressions.&lt;/p&gt;
+
+&lt;p&gt;A quick feature overview:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;No heated print bed&lt;/li&gt;
+  &lt;li&gt;Print size: 116mm (height) x 109mm (length) x 113mm (depth)&lt;/li&gt;
+  &lt;li&gt;Can print ABS, PLA and other filaments&lt;/li&gt;
+  &lt;li&gt;Easy to use print software&lt;/li&gt;
+  &lt;li&gt;No manual configuration or adjustment required&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;the-good&quot;&gt;The Good&lt;/h3&gt;
+
+&lt;p&gt;I’m quite impressed with the printer and how it handles. Although the small form factor limits the print size quite a bit, the printer itself has a handy size and doesn’t take up too much space. 
+It’s extremely easy to use and able to produce comparably high quality prints with the correct print settings. 
+And let’s be honest:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;You won’t find another consumer printer with this price tag!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;the-bad&quot;&gt;The Bad&lt;/h3&gt;
+
+&lt;p&gt;There are some drawbacks of course…&lt;/p&gt;
+
+&lt;p&gt;The only true design flaw the printer has in my opinion is the &lt;strong&gt;internal filament storage&lt;/strong&gt; beneath the printing bed. Inserting the filament and routing the thread through the filament tube is extremely cumbersome. My filament often broke somewhere in the middle which makes it extremely difficult to remove again. Furthermore the filament motor just doesn’t have enough grip and power to “pull” the filament into the extruder nozzle.
+So just don’t bother with internal filament, having it externally solves all the problems. The m3d printer team even provides 3d files for printing out an external filament spool holder which you can attach to the printer frame. My recommendation: just do that and be done with it!&lt;/p&gt;
+
+&lt;p&gt;The printing software works flawlessly most of the time but still has a “beta” smell on it. It’s .NET based which means it operates using the Mono Framework on OSX. 
+The software is obviously still being polished and new releases are uploaded frequently. 
+Because the software doesn’t have a version check feature (yet) you’ll have to check and download it yourself.&lt;/p&gt;
+
+&lt;p&gt;Another problem I’ve faced so far is &lt;strong&gt;print warping&lt;/strong&gt;, it means larger prints don’t always properly stick to the print bed - although the bed is lined with BuildTak special printing surface. This seems to happen more often with ABS filament, PLA works just fine most of the time.&lt;/p&gt;
+
+&lt;h3 id=&quot;worth-mentioning&quot;&gt;Worth Mentioning&lt;/h3&gt;
+
+&lt;p&gt;There are a few other things I’d like to mention - but I’ll keep it brief.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Not all filaments work equally well&lt;/strong&gt;, there are quite hefty differences between them regarding print warping and print quality. The only way to get a feeling which filament is good for what is to do test prints and compare the results.&lt;/li&gt;
+  &lt;li&gt;And there is the &lt;strong&gt;very long printing time&lt;/strong&gt; for a considerable sized model. You can expect larger models to take at least 10 to 20 hours to print. A small model takes about 4 hours.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;So that’s it. I’ll go on evaluating the printer further and of course also posting my successful prints.&lt;/p&gt;
+
+&lt;p&gt;If you own a Micro 3D Printer yourself, I’d be glad to hear your experiences with it…&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 25 Aug 2015 00:00:00 +0200</pubDate>
+        <link>http://www.code-n-fold.com/gadgets/2015/08/25/m3d-print.html</link>
+        <guid isPermaLink="true">http://www.code-n-fold.com/gadgets/2015/08/25/m3d-print.html</guid>
+      </item>
+    
+      <item>
+        <title>Trust me, I&#39;m an engineer</title>
+        <description>&lt;p&gt;Not much to say - watch, listen and laugh…&lt;/p&gt;
+
+&lt;div class=&quot;media youtube&quot; data-animation=&quot;fadeInUp&quot;&gt;
+
+	
+		&lt;iframe src=&quot;http://www.youtube.com/embed/rp8hvyjZWHs&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+	
+
+	
+		&lt;div class=&quot;caption&quot; data-animation=&quot;fadeInRightBig&quot;&gt;
+		  
+		  
+		  	&lt;h4&gt;Trust me, I&#39;m an engineer&lt;/h4&gt;
+		  
+
+		  
+
+		  
+
+		&lt;/div&gt;
+	
+
+&lt;/div&gt;
+
+</description>
+        <pubDate>Mon, 24 Aug 2015 00:00:00 +0200</pubDate>
+        <link>http://www.code-n-fold.com/fun/2015/08/24/trust-me-im-an-engineer.html</link>
+        <guid isPermaLink="true">http://www.code-n-fold.com/fun/2015/08/24/trust-me-im-an-engineer.html</guid>
+      </item>
+    
+      <item>
+        <title>New layout, new host, new content</title>
+        <description>&lt;p&gt;As you might have noticed, a few other things have changed as well:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a class=&quot;external&quot; target=&quot;_blank&quot; href=&quot;http://jekyllrb.com&quot;&gt;jekyll&lt;/a&gt; is now my blog generator&lt;/li&gt;
+  &lt;li&gt;I’m hosting this blog using &lt;a class=&quot;external&quot; target=&quot;_blank&quot; href=&quot;https://pages.github.com/&quot;&gt;GitHub Pages&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;I’ve migrated some of the old blog posts - not all of them&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I’m still not completely happy with the way the blog looks at the moment, so you can expect further changes. But for a start it’ll do.&lt;/p&gt;
+
+&lt;p&gt;So let’s see what can be done with this :)&lt;/p&gt;
+
+&lt;p&gt;In case you’re wondering about the picture. This is an incredibly old typewriter i found in my parents’ attic.
+It only has two buttons, one for space and one to print the currently selected letter. The letter itself is selected by pointing a metal tip at a curved surface showing all available letters.
+I quite like this old design - but no chance of fast writing using the 10 finger system…&lt;/p&gt;
+
+&lt;p&gt;Here are some more pictures of it:&lt;/p&gt;
+
+&lt;div class=&quot;media image&quot; data-animation=&quot;fadeInUp&quot;&gt;
+
+	
+		&lt;img src=&quot;/images/typewriter/letter_pad.png&quot; alt=&quot;Letter pad&quot; /&gt;
+	
+
+	
+		&lt;div class=&quot;caption&quot; data-animation=&quot;fadeInRightBig&quot;&gt;
+		  
+		  
+		  	&lt;h4&gt;Letter pad&lt;/h4&gt;
+		  
+
+		  
+
+		  
+
+		&lt;/div&gt;
+	
+
+&lt;/div&gt;
+
+&lt;div class=&quot;media image&quot; data-animation=&quot;fadeInUp&quot;&gt;
+
+	
+		&lt;img src=&quot;/images/typewriter/type_writer_mignon.png&quot; alt=&quot;&quot; /&gt;
+	
+
+	
+
+&lt;/div&gt;
+
+&lt;div class=&quot;media image&quot; data-animation=&quot;fadeInUp&quot;&gt;
+
+	
+		&lt;img src=&quot;/images/typewriter/type_writer_mignon_1.png&quot; alt=&quot;&quot; /&gt;
+	
+
+	
+
+&lt;/div&gt;
+</description>
+        <pubDate>Fri, 21 Aug 2015 00:00:00 +0200</pubDate>
+        <link>http://www.code-n-fold.com/2015/08/21/new-blog.html</link>
+        <guid isPermaLink="true">http://www.code-n-fold.com/2015/08/21/new-blog.html</guid>
+      </item>
+    
+      <item>
+        <title>Rubymine and Ruby 1.9.x debugging - get it working</title>
+        <description>&lt;p&gt;Sadly Rubymine still hasn’t resolved the debugger issue when trying to debug a Ruby 1.9.x application inside Rubymine.
+It’s not hard to get the debugger up and running when you know how, there’s also a lot of chatter among the topic.&lt;/p&gt;
+
+&lt;p&gt;It boils down to the following steps:&lt;/p&gt;
+
+&lt;p&gt;1) Download&lt;a href=&quot;https://rubyforge.org/frs/download.php/75414/linecache19-0.5.13.gem&quot;&gt; linecache19 0.5.13&lt;/a&gt; and install it with&lt;br /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;gem install linecache19-0.5.13.gem&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;2) Install the 1.9.x Ruby debug base (pre-release)&lt;br /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;gem install ruby-debug-base19x --pre&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;3) Install the 1.9.x Ruby debug ide (also pre-release)&lt;br /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;gem install ruby-debug-ide19  --pre&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;4) Start Rubymine and you’re set!&lt;/p&gt;
+</description>
+        <pubDate>Fri, 14 Sep 2012 18:00:22 +0200</pubDate>
+        <link>http://www.code-n-fold.com/programming/2012/09/14/rubymine-and-ruby-1-9-x-debugging-get-it-working.html</link>
+        <guid isPermaLink="true">http://www.code-n-fold.com/programming/2012/09/14/rubymine-and-ruby-1-9-x-debugging-get-it-working.html</guid>
+      </item>
+    
+      <item>
+        <title>Magnolia Conference 2012</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://www.magnolia-cms.com/community/magnolia-conference.html&quot;&gt;The Magnolia Conference 2012&lt;/a&gt; ended last wednesday - it was an overall great experience with a lot to take with and many interesting people and discussions. There is also a &lt;a href=&quot;https://blog.namics.com/2012/09/magnolia-conference-2012.html&quot;&gt;small blog post about it&lt;/a&gt; in my company’s blog.&lt;/p&gt;
+
+&lt;p&gt;I’m impressed with the big steps forward Magnolia takes with the new Magnolia 5 Release and its completely new Vaadin-based administration backend.&lt;/p&gt;
+
+&lt;p&gt;Really looking forward to the first project with it!&lt;/p&gt;
+</description>
+        <pubDate>Mon, 10 Sep 2012 08:58:18 +0200</pubDate>
+        <link>http://www.code-n-fold.com/conferences/2012/09/10/magnolia-conference-2012.html</link>
+        <guid isPermaLink="true">http://www.code-n-fold.com/conferences/2012/09/10/magnolia-conference-2012.html</guid>
+      </item>
+    
   </channel>
 </rss>

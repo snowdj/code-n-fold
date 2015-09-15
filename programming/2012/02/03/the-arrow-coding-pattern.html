@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <title>The Arrow - Coding Pattern?!</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Code and Origami – Software Engineering" />
+
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="code 'n fold" />
+    <meta property="og:title" content="The Arrow - Coding Pattern?!" />
+    <meta property="og:description" content="Code and Origami – Software Engineering" />
+    <meta property="og:url" content="http://www.code-n-fold.com/programming/2012/02/03/the-arrow-coding-pattern.html" />
+    <meta property="og:image" content="http://www.code-n-fold.com/images/" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="The Arrow - Coding Pattern?!" />
+    <meta name="twitter:url" content="http://www.code-n-fold.com/programming/2012/02/03/the-arrow-coding-pattern.html" />
+    <meta name="twitter:image" content="http://www.code-n-fold.com/images/" />
+    <meta name="twitter:site" content="@code_n_fold" />
+    <meta name="twitter:creator" content="@code_n_fold" />
+    
+    <meta name="twitter:description" content="Code and Origami – Software Engineering">
+    
+    
+
+
+    <link rel="alternate" href="http://www.code-n-fold.com/feed.xml" type="application/rss+xml" title="The Arrow - Coding Pattern?!" />
+    <link rel="canonical" href="/programming/2012/02/03/the-arrow-coding-pattern.html" />
+
+    <link rel="stylesheet" href="/assets/normalize.css" />
+    <link rel="stylesheet" href="/assets/animate.css" />
+    <link rel="stylesheet" href="/assets/styles.css" />
+    <link rel="stylesheet" href="/assets/custom.css" />
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-66459836-1', 'auto');
+        ga('send', 'pageview');
+      </script>
+    
+
+  </head>
+
+  <body>
+
+    <header data-animation="fadeInDownBig">
+
+      <a href="/" title="Back to Homepage" class="logo">code <i>'n</i> fold</a>
+
+      
+      
+
+      <button class="toggle">Menu</button>
+      <nav>
+        <ul>
+          <li><a href="/" title="Home">Home</a></li>
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              <li><a href="/about.html" title="About">About</a></li>
+            
+          
+            
+              <li><a href="/projects.html" title="Projects">Projects</a></li>
+            
+          
+            
+              <li><a href="/archive/" title="Archive">Archive</a></li>
+            
+          
+            
+              <li><a href="/categories.html" title="Categories">Categories</a></li>
+            
+          
+
+        <hr/>
+
+          
+            
+              <li><a href="/tools/2011/11/28/convert-mysql-dump-to-sqlite-format.html" title="MySQL 2 SQLite">MySQL 2 SQLite</a></li>
+            
+          
+            
+              <li><a href="/sql/2012/04/12/fix-wrong-utf-8-encodings-in-mysql-table.html" title="Fix MySQL UTF-8 encoding">Fix MySQL UTF-8 encoding</a></li>
+            
+          
+            
+              <li><a href="/deployment/2012/06/25/secure-your-staging-environments-with-capistrano-and-htaccess.html" title="Capistrano and .htaccess">Capistrano and .htaccess</a></li>
+            
+          
+            
+              <li><a href="/projects/2012/08/16/git-flow-cheatsheet.html" title="Git flow cheatsheet">Git flow cheatsheet</a></li>
+            
+          
+        </ul>
+      </nav>
+
+    </header>
+
+
+
+	
+
+
+<section class="content">
+
+	<article>
+
+		<header class="gradient-1" data-animation="fadeInDownBig">
+
+			
+
+<div class="excerpt">
+
+  
+    <span class="title">6 minutes</span>
+  
+
+	
+
+		
+			<h1><a href="/programming/2012/02/03/the-arrow-coding-pattern.html" title="The Arrow - Coding Pattern?!">The Arrow - Coding Pattern?!</a></h1>
+		
+
+
+	
+
+	<p>One of the absolute worst code snippets I've ever stumbled upon...</p>
+
+	
+
+		
+
+			<span class="meta">Published <b>Feb 3, 2012</b>
+
+        
+          in <b>programming</b>
+        
+
+        
+          with tags:
+        
+
+        
+          <a class="tag" href="/tags/bad-code">bad code</a>
+        
+          <a class="tag" href="/tags/coding-pattern">coding pattern</a>
+        
+      </span>
+
+		
+
+	
+
+</div>
+
+
+	<a href="#" title="Scroll" class="scroll">Scroll</a>
+
+
+
+		</header>
+
+		<div class="body" data-animation="fadeInUp">
+
+			<p>Just as an example of what software engineers like me have to cope with sometimes. I found this nasty little bit of code inside an asp .net project we had to integrate into one of our systems. I won’t post the name of the “artist” out of courtesy.</p>
+
+<p>I call it “Coding pattern - <strong>The Arrow</strong>” - just for fun</p>
+
+<p>Another thing would be “Recursions - how <em>not</em> to do it…”
+Got any other name for this abomination of code let me know…
+But enough of this bashing, here’s the actual code in case you’d like to take a closer look…</p>
+
+<div class="highlight"><pre><code class="language-aspx-vb" data-lang="aspx-vb">Sub MakeTreeIncPx(fileContents)
+
+    schSubFolpx objFolder,1, fileContents
+    For Each objSubFolder In objFolder.SubFolders
+        &#39; subject area
+        strcurrentfolder=objsubfolder.name
+        schSubFolpx objSubFolder,2, fileContents
+        &#39; under subject area
+        Set objNextFolder1 = objFSO.GetFolder(objFolder.path <span class="err">&amp;</span> &quot;\&quot; <span class="err">&amp;</span> objsubFolder.name)
+        For each nextfolder1 in objNextFolder1.SubFolders
+            schSubFolpx nextFolder1,3, fileContents
+            Set objNextFolder2 = objFSO.GetFolder(objFolder.path <span class="err">&amp;</span> &quot;\&quot; <span class="err">&amp;</span> objsubFolder.name <span class="err">&amp;</span> &quot;\&quot; <span class="err">&amp;</span> nextfolder1.name)
+            For each nextFolder2 in objNextFolder2.SubFolders
+                schSubFolpx nextFolder2,4, fileContents
+                Set objNextFolder3 = objFSO.GetFolder(objFolder.path <span class="err">&amp;</span> &quot;\&quot; <span class="err">&amp;</span> objsubFolder.name <span class="err">&amp;</span> &quot;\&quot; <span class="err">&amp;</span> nextfolder1.name <span class="err">&amp;</span> &quot;\&quot; <span class="err">&amp;</span> nextfolder2.name)
+                For each nextFolder3 in objNextFolder3.SubFolders
+                    schSubFolpx nextFolder3,5, fileContents
+                    Set objNextFolder4 = objFSO.GetFolder(objFolder.path <span class="err">&amp;</span> &quot;\&quot; <span class="err">&amp;</span> objsubFolder.name <span class="err">&amp;</span> &quot;\&quot; <span class="err">&amp;</span> nextfolder1.name <span class="err">&amp;</span> &quot;\&quot; <span class="err">&amp;</span> nextfolder2.name <span class="err">&amp;</span> &quot;\&quot; <span class="err">&amp;</span> nextfolder3.name)
+                    For each nextFolder4 in objNextFolder4.SubFolders
+                        schSubFolpx nextFolder4,6, fileContents
+                        Set objNextFolder5 = objFSO.GetFolder(objFolder.path <span class="err">&amp;</span> &quot;\&quot; <span class="err">&amp;</span> objsubFolder.name <span class="err">&amp;</span> &quot;\&quot; <span class="err">&amp;</span> nextfolder1.name <span class="err">&amp;</span> &quot;\&quot; <span class="err">&amp;</span> nextfolder2.name <span class="err">&amp;</span> &quot;\&quot; <span class="err">&amp;</span> nextfolder3.name <span class="err">&amp;</span> &quot;\&quot; <span class="err">&amp;</span> nextfolder4.name)
+                        For each nextFolder5 in objNextFolder5.SubFolders
+                            schSubFolpx nextFolder5,7, fileContents
+                            Set objNextFolder6 = objFSO.GetFolder(objFolder.path <span class="err">&amp;</span> &quot;\&quot; <span class="err">&amp;</span> objsubFolder.name <span class="err">&amp;</span> &quot;\&quot; <span class="err">&amp;</span> nextfolder1.name <span class="err">&amp;</span> &quot;\&quot; <span class="err">&amp;</span> nextfolder2.name <span class="err">&amp;</span> &quot;\&quot; <span class="err">&amp;</span> nextfolder3.name <span class="err">&amp;</span> &quot;\&quot; <span class="err">&amp;</span> nextfolder4.name <span class="err">&amp;</span> &quot;\&quot; <span class="err">&amp;</span> nextfolder5.name)
+                            For each nextFolder6 in objNextFolder6.SubFolders
+                                schSubFolpx nextFolder6,8, fileContents
+                                Set objNextFolder7 = objFSO.GetFolder(objFolder.path <span class="err">&amp;</span> &quot;\&quot; <span class="err">&amp;</span> objsubFolder.name <span class="err">&amp;</span> &quot;\&quot; <span class="err">&amp;</span> nextfolder1.name <span class="err">&amp;</span> &quot;\&quot; <span class="err">&amp;</span> nextfolder2.name <span class="err">&amp;</span> &quot;\&quot; <span class="err">&amp;</span> nextfolder3.name <span class="err">&amp;</span> &quot;\&quot; <span class="err">&amp;</span> nextfolder4.name <span class="err">&amp;</span> &quot;\&quot; <span class="err">&amp;</span> nextfolder5.name <span class="err">&amp;</span> &quot;\&quot; <span class="err">&amp;</span> nextfolder6.name)
+                                For each nextFolder7 in objNextFolder7.SubFolders
+                                    schSubFolpx nextFolder7,9, fileContents
+                                next
+                            next
+                        next
+                    next
+                next
+            next
+        next
+    Next
+    i=0
+    while i <span class="nt">&lt; folderNo</span>
+        <span class="na">i=</span><span class="s">i+1</span>
+        <span class="na">j=</span><span class="s">0</span>
+        <span class="err">if</span> <span class="err">folderPx(i)=2</span> <span class="err">then</span>
+            <span class="err">if</span> <span class="err">folderlev(i)=2</span> <span class="err">then</span>
+                <span class="err">fileContents.Writeline</span> <span class="err">&quot;insDoc(foldersTree,</span> <span class="err">gLnk(&quot;</span> <span class="err">&amp;</span> <span class="err">chr(34)</span> <span class="err">&amp;</span> <span class="err">&quot;S&quot;</span> <span class="err">&amp;</span> <span class="err">chr(34)</span> <span class="err">&amp;</span> <span class="err">&quot;,&quot;</span> <span class="err">&amp;</span> <span class="err">Folderpath(i)</span> <span class="err">&amp;</span>  <span class="err">&quot;))&quot;</span>
+            <span class="err">elseif</span> <span class="err">folderlev(i)=3</span> <span class="err">then</span>
+                <span class="err">fileContents.Writeline</span> <span class="err">&quot;insDoc(aux1,</span> <span class="err">gLnk(&quot;</span> <span class="err">&amp;</span> <span class="err">chr(34)</span> <span class="err">&amp;</span> <span class="err">&quot;S&quot;</span> <span class="err">&amp;</span> <span class="err">chr(34)</span> <span class="err">&amp;</span> <span class="err">&quot;,&quot;</span> <span class="err">&amp;</span> <span class="err">Folderpath(i)</span> <span class="err">&amp;</span> <span class="err">&quot;))&quot;</span>
+            <span class="err">elseif</span> <span class="err">folderlev(i)=4</span> <span class="err">then</span>
+                <span class="err">fileContents.Writeline</span> <span class="err">&quot;insDoc(aux2,</span> <span class="err">gLnk(&quot;</span> <span class="err">&amp;</span> <span class="err">chr(34)</span> <span class="err">&amp;</span> <span class="err">&quot;S&quot;</span> <span class="err">&amp;</span> <span class="err">chr(34)</span> <span class="err">&amp;</span> <span class="err">&quot;,&quot;</span> <span class="err">&amp;</span> <span class="err">Folderpath(i)</span> <span class="err">&amp;</span> <span class="err">&quot;))&quot;</span>
+            <span class="err">elseif</span> <span class="err">folderlev(i)=5</span> <span class="err">then</span>
+                <span class="err">fileContents.Writeline</span> <span class="err">&quot;insDoc(aux3,</span> <span class="err">gLnk(&quot;</span> <span class="err">&amp;</span> <span class="err">chr(34)</span> <span class="err">&amp;</span> <span class="err">&quot;S&quot;</span> <span class="err">&amp;</span> <span class="err">chr(34)</span> <span class="err">&amp;</span> <span class="err">&quot;,&quot;</span> <span class="err">&amp;</span> <span class="err">Folderpath(i)</span> <span class="err">&amp;</span> <span class="err">&quot;))&quot;</span>
+            <span class="err">elseif</span> <span class="err">folderlev(i)=6</span> <span class="err">then</span>
+                <span class="err">fileContents.Writeline</span> <span class="err">&quot;insDoc(aux4,</span> <span class="err">gLnk(&quot;</span> <span class="err">&amp;</span> <span class="err">chr(34)</span> <span class="err">&amp;</span> <span class="err">&quot;S&quot;</span> <span class="err">&amp;</span> <span class="err">chr(34)</span> <span class="err">&amp;</span> <span class="err">&quot;,&quot;</span> <span class="err">&amp;</span> <span class="err">Folderpath(i)</span> <span class="err">&amp;</span> <span class="err">&quot;))&quot;</span>
+            <span class="err">elseif</span> <span class="err">folderlev(i)=7</span> <span class="err">then</span>
+                <span class="err">fileContents.Writeline</span> <span class="err">&quot;insDoc(aux5,</span> <span class="err">gLnk(&quot;</span> <span class="err">&amp;</span> <span class="err">chr(34)</span> <span class="err">&amp;</span> <span class="err">&quot;S&quot;</span> <span class="err">&amp;</span> <span class="err">chr(34)</span> <span class="err">&amp;</span> <span class="err">&quot;,&quot;</span> <span class="err">&amp;</span> <span class="err">Folderpath(i)</span> <span class="err">&amp;</span> <span class="err">&quot;))&quot;</span>
+            <span class="err">elseif</span> <span class="err">folderlev(i)=8</span> <span class="err">then</span>
+                <span class="err">fileContents.Writeline</span> <span class="err">&quot;insDoc(aux6,</span> <span class="err">gLnk(&quot;</span> <span class="err">&amp;</span> <span class="err">chr(34)</span> <span class="err">&amp;</span> <span class="err">&quot;S&quot;</span> <span class="err">&amp;</span> <span class="err">chr(34)</span> <span class="err">&amp;</span> <span class="err">&quot;,&quot;</span> <span class="err">&amp;</span> <span class="err">Folderpath(i)</span> <span class="err">&amp;</span> <span class="err">&quot;))&quot;</span>
+            <span class="err">elseif</span> <span class="err">folderlev(i)=9</span> <span class="err">then</span>
+                <span class="err">fileContents.Writeline</span> <span class="err">&quot;insDoc(aux7,</span> <span class="err">gLnk(&quot;</span> <span class="err">&amp;</span> <span class="err">chr(34)</span> <span class="err">&amp;</span> <span class="err">&quot;S&quot;</span> <span class="err">&amp;</span> <span class="err">chr(34)</span> <span class="err">&amp;</span> <span class="err">&quot;,&quot;</span> <span class="err">&amp;</span> <span class="err">Folderpath(i)</span> <span class="err">&amp;</span> <span class="err">&quot;))&quot;</span>
+            <span class="err">end</span> <span class="err">if</span>
+
+        <span class="err">else</span> <span class="err">&#39;if</span> <span class="err">folderPx(i)=0</span> <span class="err">then</span>  <span class="err">&#39;</span> <span class="err">folder</span> <span class="err">above</span> <span class="err">px</span> <span class="err">or</span> <span class="err">link</span>
+            <span class="na">cont=</span><span class="s">0</span>
+            <span class="na">keeplevel=</span><span class="s">folderlev(i)</span>
+            <span class="err">if</span> <span class="err">folderno</span><span class="nt">&gt;</span>i then
+                if folderPx(i+1)&gt;0 and folderlev(i+1)&gt; keeplevel then
+                    cont=1
+                else
+                    if folderno&gt;i+1 and folderlev(i+1)&gt; keeplevel then
+                        if folderPx(i+2)&gt;0 and folderlev(i+2)&gt; keeplevel then
+                            cont=2
+                        else
+                            if folderno&gt;i+2 and folderlev(i+2)&gt; keeplevel then
+                                if folderPx(i+3)&gt;0 and folderlev(i+3)&gt; keeplevel then
+                                    cont=3
+                                else
+                                    if folderno&gt;i+3 and folderlev(i+3)&gt; keeplevel then
+                                        if folderPx(i+4)&gt;0 and folderlev(i+4)&gt; keeplevel then
+                                            cont=4
+                                        else
+                                            if folderno&gt;i+4  and folderlev(i+4)&gt; keeplevel then
+                                                if folderPx(i+5)&gt;0 and folderlev(i+5)&gt; keeplevel then
+                                                    cont=5
+                                                else
+                                                    if folderno&gt;i+5  and folderlev(i+5)&gt; keeplevel then
+                                                        if folderPx(i+6)&gt;0 and folderlev(i+6)&gt; keeplevel then
+                                                            cont=6
+                                                        else
+                                                            if folderno&gt;i+6  and folderlev(i+6)&gt; keeplevel then
+                                                                if folderPx(i+7)&gt;0 and folderlev(i+7)&gt; keeplevel then
+                                                                    cont=7
+                                                                else
+                                                                    if folderno&gt;i+7  and folderlev(i+7)&gt; keeplevel then
+                                                                        if folderPx(i+8)&gt;0 and folderlev(i+8)&gt; keeplevel then
+                                                                            cont=8
+                                                                        else
+                                                                            if folderno&gt;i+8  and folderlev(i+8)&gt; keeplevel then
+                                                                                if folderPx(i+9)&gt;0 and folderlev(i+9)&gt; keeplevel then
+                                                                                    cont=9
+                                                                                else
+                                                                                    if folderno&gt;i+9  and folderlev(i+9)&gt; keeplevel then
+                                                                                        if folderPx(i+10)&gt;0 and folderlev(i+10)&gt; keeplevel then
+                                                                                            cont=10
+                                                                                        else
+                                                                                            if folderno&gt;i+10  and folderlev(i+10)&gt; keeplevel then
+                                                                                                if folderPx(i+11)&gt;0 and folderlev(i+11)&gt; keeplevel then
+                                                                                                    cont=11
+                                                                                                else
+                                                                                                    if folderno&gt;i+11  and folderlev(i+11)&gt; keeplevel then
+                                                                                                        if folderPx(i+12)&gt;0 and folderlev(i+12)&gt; keeplevel then
+                                                                                                            cont=12
+                                                                                                        else
+                                                                                                            if folderno&gt;i+12  and folderlev(i+12)&gt; keeplevel then
+                                                                                                                if folderPx(i+13)&gt;0 and folderlev(i+13)&gt; keeplevel then
+                                                                                                                    cont=13
+                                                                                                                else
+                                                                                                                    if folderno&gt;i+13  and folderlev(i+13)&gt; keeplevel then
+                                                                                                                        if folderPx(i+14)&gt;0 and folderlev(i+14)&gt; keeplevel then
+                                                                                                                            cont=14
+                                                                                                                        else
+                                                                                                                            if folderno&gt;i+14  and folderlev(i+14)&gt; keeplevel then
+                                                                                                                                if folderPx(i+15)&gt;0 and folderlev(i+15)&gt; keeplevel then
+                                                                                                                                    cont=15
+                                                                                                                                else
+
+                                                                                                                                end if  
+                                                                                                                            end if
+                                                                                                                        end if  
+                                                                                                                    end if
+                                                                                                                end if  
+                                                                                                            end if
+                                                                                                        end if  
+                                                                                                    end if
+                                                                                                end if  
+                                                                                            end if
+                                                                                        end if  
+                                                                                    end if
+                                                                                end if  
+                                                                            end if  
+                                                                        end if  
+                                                                    end if
+                                                                end if  
+                                                            end if
+                                                        end if  
+                                                    end if
+                                                end if
+                                            end if
+                                        end if
+                                    end if
+                                end if
+                            end if
+                        end if
+                    end if
+                end if
+            end if
+            if cont&gt;0 then
+                if folderlev(i)=2 then
+                    fileContents.Writeline &quot;aux1=insFld(foldersTree, gFld(&quot; <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> FolderName(i) <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> &quot;,&quot; <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> &quot;javascript:parent.op()&quot; <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> &quot;))&quot;
+                elseif folderlev(i) = 3 then
+                    fileContents.Writeline &quot;aux2=insFld(aux1, gFld(&quot; <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> FolderName(i) <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> &quot;,&quot; <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> &quot;javascript:parent.op()&quot; <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> &quot;))&quot;
+                elseif folderlev(i) = 4 then
+                    fileContents.Writeline &quot;aux3=insFld(aux2, gFld(&quot; <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> FolderName(i) <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> &quot;,&quot; <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> &quot;javascript:parent.op()&quot; <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> &quot;))&quot;
+                elseif folderlev(i) = 5 then
+                    fileContents.Writeline &quot;aux4=insFld(aux3, gFld(&quot; <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> FolderName(i) <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> &quot;,&quot; <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> &quot;javascript:parent.op()&quot; <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> &quot;))&quot;
+                elseif folderlev(i) = 6 then
+                    fileContents.Writeline &quot;aux5=insFld(aux4, gFld(&quot; <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> FolderName(i) <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> &quot;,&quot; <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> &quot;javascript:parent.op()&quot; <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> &quot;))&quot;
+                elseif folderlev(i) = 7 then
+                    fileContents.Writeline &quot;aux6=insFld(aux5, gFld(&quot; <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> FolderName(i) <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> &quot;,&quot; <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> &quot;javascript:parent.op()&quot; <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> &quot;))&quot;
+                elseif folderlev(i) = 8 then
+                    fileContents.Writeline &quot;aux7=insFld(aux6, gFld(&quot; <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> FolderName(i) <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> &quot;,&quot; <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> &quot;javascript:parent.op()&quot; <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> &quot;))&quot;
+                elseif folderlev(i) = 9 then
+                    fileContents.Writeline &quot;aux8=insFld(aux7, gFld(&quot; <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> FolderName(i) <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> &quot;,&quot; <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> &quot;javascript:parent.op()&quot; <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> &quot;))&quot;
+                end if
+            end if
+        end if  
+        &#39;if folderPx(i)=1 then   &#39;px folder
+        if pxName(i) <span class="err">&lt;</span>&gt; &quot;&quot; then
+
+            if folderlev(i)=2 then
+                fileContents.Writeline &quot;insDoc(foldersTree, gLnk(&quot; <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> &quot;S&quot; <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> &quot;,&quot;  <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> pxName(i) <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> &quot;,&quot; <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> FolderPath(i) <span class="err">&amp;</span> &quot;))&quot;
+            elseif folderlev(i)=3 then
+                fileContents.Writeline &quot;insDoc(aux1, gLnk(&quot; <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> &quot;S&quot; <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> &quot;,&quot; <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> pxName(i) <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> &quot;,&quot; <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> FolderPath(i) <span class="err">&amp;</span> &quot;))&quot;
+            elseif folderlev(i)=4 then
+                fileContents.Writeline &quot;insDoc(aux2, gLnk(&quot; <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> &quot;S&quot; <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> &quot;,&quot; <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> pxName(i) <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> &quot;,&quot; <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> FolderPath(i) <span class="err">&amp;</span> &quot;))&quot;
+            elseif folderlev(i)=5 then
+                fileContents.Writeline &quot;insDoc(aux3, gLnk(&quot; <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> &quot;S&quot; <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> &quot;,&quot; <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> pxName(i) <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> &quot;,&quot; <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> FolderPath(i) <span class="err">&amp;</span> &quot;))&quot;
+            elseif folderlev(i)=6 then
+                fileContents.Writeline &quot;insDoc(aux4, gLnk(&quot; <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> &quot;S&quot; <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> &quot;,&quot; <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> pxName(i) <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> &quot;,&quot; <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> FolderPath(i) <span class="err">&amp;</span> &quot;))&quot;
+            elseif folderlev(i)=7 then
+                fileContents.Writeline &quot;insDoc(aux5, gLnk(&quot; <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> &quot;S&quot; <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> &quot;,&quot; <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> pxName(i) <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> &quot;,&quot; <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> FolderPath(i) <span class="err">&amp;</span> &quot;))&quot;
+            elseif folderlev(i)=8 then
+                fileContents.Writeline &quot;insDoc(aux6, gLnk(&quot; <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> &quot;S&quot; <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> &quot;,&quot; <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> pxName(i) <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> &quot;,&quot; <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> FolderPath(i) <span class="err">&amp;</span> &quot;))&quot;
+            elseif folderlev(i)=9 then
+                fileContents.Writeline &quot;insDoc(aux7, gLnk(&quot; <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> &quot;S&quot; <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> &quot;,&quot; <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> pxName(i) <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> &quot;,&quot; <span class="err">&amp;</span> chr(34) <span class="err">&amp;</span> FolderPath(i) <span class="err">&amp;</span> &quot;))&quot;
+            end if
+        &#39;   end if
+
+        end if
+    wend
+
+End Sub</code></pre></div>
+
+
+
+		</div>
+
+		<footer>
+
+			
+
+  <div class="meta">
+
+    <div class="author" data-animation="fadeInUp">
+                  
+      <span class="title">Written by</span>
+
+      <h4>Daniel Kummer</h4>
+      <p>I'm a software engineer who also enjoys lots of other things like diving, tinkering, photography, whiskey and much more...</p>
+
+      
+        <ul>
+          <li><a href="https://twitter.com/code_n_fold" title="Twitter" class="icon twitter">Twitter</a></li>
+          <li><a href="https://www.facebook.com/daniel.kummer" title="Facebook" class="icon facebook">Facebook</a></li>
+          
+          <li><a href="https://www.linkedin.com/pub/daniel-kummer/58/344/528" title="LinkedIn" class="icon linkedin">LinkedIn</a></li>
+          
+          
+          
+          <li><a href="feed://code-n-fold.com/feed.xml" title="RSS" class="icon rss">RSS</a></li>
+        </ul>
+      
+
+    </div>
+
+    <div class="share" data-animation="fadeInUp">
+                  
+      <span class="title">Share</span>
+
+      <ul>
+        <li><a href="https://twitter.com/home?status=Code%20and%20Origami%20%E2%80%93%20Software%20Engineering%20http://www.code-n-fold.com/programming/2012/02/03/the-arrow-coding-pattern.html" title="Tweet" class="icon twitter">Tweet</a></li>
+        <li><a href="https://www.facebook.com/sharer/sharer.php?u=http://www.code-n-fold.com/programming/2012/02/03/the-arrow-coding-pattern.html" title="Like" class="icon facebook">Like</a></li>
+        <li><a href="https://plus.google.com/share?url=http://www.code-n-fold.com/programming/2012/02/03/the-arrow-coding-pattern.html" title="+1" class="icon google">+1</a></li>
+      </ul>
+
+    </div>
+
+  </div>
+
+
+
+			
+  <div class="comments" data-animation="fadeInUp">
+    
+    <span class="title">Comments</span>
+    <div id="disqus_thread"></div>
+
+    <script type="text/javascript">
+      var disqus_shortname = 'code-n-fold';
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+
+    <noscript>
+      Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+    </noscript>
+
+  </div>
+
+
+			
+
+	<div class="pagination" data-animation="fadeInUp">
+		<a href="/programming/2012/02/03/gitlabhq-gitolite-apache-passenger-and-centos-5-5.html" title="View Older Posts" class="button older">Older</a>
+		<a href="/talks/2012/02/13/git-differences-to-subversion-branching-and-tooling.html" title="View Newer Posts" class="button newer">Newer</a>
+	</div>
+
+
+
+
+
+		</footer>
+
+	</article>
+
+</section>
+
+
+
+	
+		
+	
+
+	
+		
+	
+
+	<section class="teaser gradient-1" data-animation="fadeInUp">
+	      
+		<div class="excerpt">
+	            
+			<span class="title">10 minutes</span>
+
+			
+				<h1><a href="/programming/2012/02/03/gitlabhq-gitolite-apache-passenger-and-centos-5-5.html" title="Gitlabhq, Gitolite, Apache Passenger and Centos 5.5">Gitlabhq, Gitolite, Apache Passenger and Centos 5.5</a></h1>
+			
+
+			<p>Getting the great project <a href="https://gitlabhq.com/">gitlabhq</a>, a web frontend for git based on gitolite and rails to run under Centos 5.5 can be quite frustrating but I managed to get the whole system up and running.</p>
+
+			
+				<span class="meta">Published <b>Feb 3, 2012</b> in <b>programming</b></span>
+			
+
+		</div>
+
+	</section>
+
+
+
+    
+
+      <footer data-animation="fadeInUp">
+        <div class="copyright">
+          <b>Copyright 2015 Daniel Kummer.</b> All Rights Reserved.
+        	<a href="mailto:daniel.kummer@gmail.com" title="Send E-Mail">Contact</a>
+        	<a href="/feed.xml" title="Subscribe to Feed">RSS</a>
+        </div>
+      </footer>
+      
+    
+
+    <script type="application/ld+json">
+    { "@context" : "http://schema.org",
+      "@type" : "Person",
+      "name" : "Daniel Kummer",
+      "url" : "http://www.code-n-fold.com",
+      "sameAs" : [ "http://www.facebook.com/daniel.kummer",
+        "http://www.twitter.com/code_n_fold"]
+    }
+    </script>
+    
+    <script src="/assets/jquery-2.1.1.min.js"></script>
+    <script src="/assets/viewportchecker.js"></script>
+    <script src="/assets/scripts.js"></script>
+
+  </body>
+
+</html>

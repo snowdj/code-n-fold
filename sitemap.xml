@@ -1,67 +1,834 @@
----
----
-
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <!-- Pages -->
     <url>
-        <loc>{{ site.url }}/about</loc>
+        <loc>http://www.code-n-fold.com/about</loc>
         <priority>1</priority>
     </url>
 
     <!-- Blog Index -->
     <url>
-        <loc>{{ site.url }}</loc>
+        <loc>http://www.code-n-fold.com</loc>
         <priority>0.75</priority>
     </url>
 
     <url>
-        <loc>{{ site.url }}/projects</loc>
+        <loc>http://www.code-n-fold.com/projects</loc>
         <priority>0.75</priority>
     </url>
 
     <!-- Posts -->
-    {% for post in site.posts %}
+    
         <url>
-            <loc>{{ site.url }}{{ post.url }}/</loc>
+            <loc>http://www.code-n-fold.com/diy/2015/09/15/useless-box-sneak-peek.html/</loc>
             <priority>1</priority>
-            {% if post.updated %}<lastmod>{{ post.updated | date_to_xmlschema }}</lastmod>{% endif %}
+            
         </url>
-    {% endfor %}
+    
+        <url>
+            <loc>http://www.code-n-fold.com/3d%20print/2015/09/14/chinese-dragon.html/</loc>
+            <priority>1</priority>
+            
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/3d%20print/2015/09/08/t-rex.html/</loc>
+            <priority>1</priority>
+            
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/3d%20print/2015/09/03/hand-of-the-king-pin.html/</loc>
+            <priority>1</priority>
+            
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/3d%20print/2015/08/31/happy-octopus.html/</loc>
+            <priority>1</priority>
+            
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/gadgets/2015/08/25/m3d-print.html/</loc>
+            <priority>1</priority>
+            
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/fun/2015/08/24/trust-me-im-an-engineer.html/</loc>
+            <priority>1</priority>
+            
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/2015/08/21/new-blog.html/</loc>
+            <priority>1</priority>
+            
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/programming/2012/09/14/rubymine-and-ruby-1-9-x-debugging-get-it-working.html/</loc>
+            <priority>1</priority>
+            
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/conferences/2012/09/10/magnolia-conference-2012.html/</loc>
+            <priority>1</priority>
+            
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/projects/2012/08/16/git-flow-cheatsheet.html/</loc>
+            <priority>1</priority>
+            
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/deployment/2012/06/25/secure-your-staging-environments-with-capistrano-and-htaccess.html/</loc>
+            <priority>1</priority>
+            
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/programming/2012/06/19/git-2-git-migration-script.html/</loc>
+            <priority>1</priority>
+            
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/programming/2012/06/18/brakeman-rails-security-analytics-tool.html/</loc>
+            <priority>1</priority>
+            
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/projects/2012/06/05/skills-my-latest-project.html/</loc>
+            <priority>1</priority>
+            
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/programming/2012/04/24/git-rails-rcov-jenkins-super-simple-ci-continuous-integration.html/</loc>
+            <priority>1</priority>
+            
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/programming/2012/04/21/rails-3-1-devise_for-breaks-dbmigrate-fix-6.html/</loc>
+            <priority>1</priority>
+            
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/programming/2012/04/20/install-node-js-on-centos-5-5.html/</loc>
+            <priority>1</priority>
+            
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/sql/2012/04/12/fix-wrong-utf-8-encodings-in-mysql-table.html/</loc>
+            <priority>1</priority>
+            
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/diy/2012/03/22/mypad-build-your-own-clipboard-out-of-an-old-macbook-pro.html/</loc>
+            <priority>1</priority>
+            
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/talks/2012/02/13/git-differences-to-subversion-branching-and-tooling.html/</loc>
+            <priority>1</priority>
+            
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/programming/2012/02/03/the-arrow-coding-pattern.html/</loc>
+            <priority>1</priority>
+            
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/programming/2012/02/03/gitlabhq-gitolite-apache-passenger-and-centos-5-5.html/</loc>
+            <priority>1</priority>
+            
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/programming/2012/01/26/easy-forking-with-git.html/</loc>
+            <priority>1</priority>
+            
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/tools/2012/01/16/watch-folders-with-hazel.html/</loc>
+            <priority>1</priority>
+            
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/tools/2011/12/22/daisydisk-analyse-your-disk-space.html/</loc>
+            <priority>1</priority>
+            
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/tools/2011/11/28/convert-mysql-dump-to-sqlite-format.html/</loc>
+            <priority>1</priority>
+            
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/talks/2011/11/22/git-why-how.html/</loc>
+            <priority>1</priority>
+            
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/2011/11/22/first-post.html/</loc>
+            <priority>1</priority>
+            
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/talks/2011/11/22/clean-code-presentation-htgw-konstanz.html/</loc>
+            <priority>1</priority>
+            
+        </url>
+    
 
     <!-- Archive -->
     <url>
-        <loc>{{ site.url }}/archive</loc>
+        <loc>http://www.code-n-fold.com/archive</loc>
         <priority>0.5</priority>
     </url>
 
     <!-- Month/Year Archive -->
-    {% for post in site.posts %}
-        {% capture month %}{{ post.date | date: '%m' }}{% endcapture %}
-        {% capture next_month %}{{ post.next.date | date: '%m' }}{% endcapture %}
-        {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
-        {% capture next_year %}{{ post.next.date | date: '%Y' }}{% endcapture %}
+    
+        
+        
+        
+        
 
-        {% if year != next_year or forloop.index == 1 %}
+        
             <url>
-                <loc>{{ site.url }}{{ post.date | date: '/%Y/' }}</loc>
+                <loc>http://www.code-n-fold.com/2015/</loc>
                 <priority>0</priority>
             </url>
-        {% endif %}
+        
 
-        {% if month != next_month or year != next_year or forloop.index == 1 %}
+        
             <url>
-                <loc>{{ site.url }}{{ post.date | date: '/%Y/%m/' }}</loc>
+                <loc>http://www.code-n-fold.com/2015/09/</loc>
                 <priority>0.25</priority>
             </url>
-        {% endif %}
-    {% endfor %}
+        
+    
+        
+        
+        
+        
+
+        
+
+        
+    
+        
+        
+        
+        
+
+        
+
+        
+    
+        
+        
+        
+        
+
+        
+
+        
+    
+        
+        
+        
+        
+
+        
+
+        
+            <url>
+                <loc>http://www.code-n-fold.com/2015/08/</loc>
+                <priority>0.25</priority>
+            </url>
+        
+    
+        
+        
+        
+        
+
+        
+
+        
+    
+        
+        
+        
+        
+
+        
+
+        
+    
+        
+        
+        
+        
+
+        
+
+        
+    
+        
+        
+        
+        
+
+        
+            <url>
+                <loc>http://www.code-n-fold.com/2012/</loc>
+                <priority>0</priority>
+            </url>
+        
+
+        
+            <url>
+                <loc>http://www.code-n-fold.com/2012/09/</loc>
+                <priority>0.25</priority>
+            </url>
+        
+    
+        
+        
+        
+        
+
+        
+
+        
+    
+        
+        
+        
+        
+
+        
+
+        
+            <url>
+                <loc>http://www.code-n-fold.com/2012/08/</loc>
+                <priority>0.25</priority>
+            </url>
+        
+    
+        
+        
+        
+        
+
+        
+
+        
+            <url>
+                <loc>http://www.code-n-fold.com/2012/06/</loc>
+                <priority>0.25</priority>
+            </url>
+        
+    
+        
+        
+        
+        
+
+        
+
+        
+    
+        
+        
+        
+        
+
+        
+
+        
+    
+        
+        
+        
+        
+
+        
+
+        
+    
+        
+        
+        
+        
+
+        
+
+        
+            <url>
+                <loc>http://www.code-n-fold.com/2012/04/</loc>
+                <priority>0.25</priority>
+            </url>
+        
+    
+        
+        
+        
+        
+
+        
+
+        
+    
+        
+        
+        
+        
+
+        
+
+        
+    
+        
+        
+        
+        
+
+        
+
+        
+    
+        
+        
+        
+        
+
+        
+
+        
+            <url>
+                <loc>http://www.code-n-fold.com/2012/03/</loc>
+                <priority>0.25</priority>
+            </url>
+        
+    
+        
+        
+        
+        
+
+        
+
+        
+            <url>
+                <loc>http://www.code-n-fold.com/2012/02/</loc>
+                <priority>0.25</priority>
+            </url>
+        
+    
+        
+        
+        
+        
+
+        
+
+        
+    
+        
+        
+        
+        
+
+        
+
+        
+    
+        
+        
+        
+        
+
+        
+
+        
+            <url>
+                <loc>http://www.code-n-fold.com/2012/01/</loc>
+                <priority>0.25</priority>
+            </url>
+        
+    
+        
+        
+        
+        
+
+        
+
+        
+    
+        
+        
+        
+        
+
+        
+            <url>
+                <loc>http://www.code-n-fold.com/2011/</loc>
+                <priority>0</priority>
+            </url>
+        
+
+        
+            <url>
+                <loc>http://www.code-n-fold.com/2011/12/</loc>
+                <priority>0.25</priority>
+            </url>
+        
+    
+        
+        
+        
+        
+
+        
+
+        
+            <url>
+                <loc>http://www.code-n-fold.com/2011/11/</loc>
+                <priority>0.25</priority>
+            </url>
+        
+    
+        
+        
+        
+        
+
+        
+
+        
+    
+        
+        
+        
+        
+
+        
+
+        
+    
+        
+        
+        
+        
+
+        
+
+        
+    
 
     <!-- Tag Archive -->
-    {% for tag in site.tags %}
+    
         <url>
-            <loc>{{ site.url }}/tag/{{ tag[0] }}/</loc>
+            <loc>http://www.code-n-fold.com/tag/code/</loc>
             <priority>0.75</priority>
         </url>
-    {% endfor %}
+    
+        <url>
+            <loc>http://www.code-n-fold.com/tag/presentation/</loc>
+            <priority>0.75</priority>
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/tag/git/</loc>
+            <priority>0.75</priority>
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/tag/bash/</loc>
+            <priority>0.75</priority>
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/tag/mysql/</loc>
+            <priority>0.75</priority>
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/tag/sql/</loc>
+            <priority>0.75</priority>
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/tag/sqlite/</loc>
+            <priority>0.75</priority>
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/tag/disk tool/</loc>
+            <priority>0.75</priority>
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/tag/osx/</loc>
+            <priority>0.75</priority>
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/tag/utility/</loc>
+            <priority>0.75</priority>
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/tag/gitlabhq/</loc>
+            <priority>0.75</priority>
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/tag/gitolite/</loc>
+            <priority>0.75</priority>
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/tag/bad code/</loc>
+            <priority>0.75</priority>
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/tag/coding pattern/</loc>
+            <priority>0.75</priority>
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/tag/Subversion/</loc>
+            <priority>0.75</priority>
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/tag/tooling/</loc>
+            <priority>0.75</priority>
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/tag/MacBook Pro/</loc>
+            <priority>0.75</priority>
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/tag/reuse/</loc>
+            <priority>0.75</priority>
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/tag/tinkering/</loc>
+            <priority>0.75</priority>
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/tag/encoding/</loc>
+            <priority>0.75</priority>
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/tag/fix/</loc>
+            <priority>0.75</priority>
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/tag/software/</loc>
+            <priority>0.75</priority>
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/tag/sql alter table/</loc>
+            <priority>0.75</priority>
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/tag/utf8/</loc>
+            <priority>0.75</priority>
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/tag/centos/</loc>
+            <priority>0.75</priority>
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/tag/snippet/</loc>
+            <priority>0.75</priority>
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/tag/devise/</loc>
+            <priority>0.75</priority>
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/tag/rails/</loc>
+            <priority>0.75</priority>
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/tag/ci/</loc>
+            <priority>0.75</priority>
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/tag/git hooks/</loc>
+            <priority>0.75</priority>
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/tag/hudson/</loc>
+            <priority>0.75</priority>
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/tag/rcov/</loc>
+            <priority>0.75</priority>
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/tag/namics/</loc>
+            <priority>0.75</priority>
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/tag/skills/</loc>
+            <priority>0.75</priority>
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/tag/analysis/</loc>
+            <priority>0.75</priority>
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/tag/audit/</loc>
+            <priority>0.75</priority>
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/tag/security/</loc>
+            <priority>0.75</priority>
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/tag/git migration/</loc>
+            <priority>0.75</priority>
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/tag/git2git/</loc>
+            <priority>0.75</priority>
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/tag/ruby/</loc>
+            <priority>0.75</priority>
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/tag/.htaccess/</loc>
+            <priority>0.75</priority>
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/tag/capistrano/</loc>
+            <priority>0.75</priority>
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/tag/cheatsheet/</loc>
+            <priority>0.75</priority>
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/tag/git-flow/</loc>
+            <priority>0.75</priority>
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/tag/conference/</loc>
+            <priority>0.75</priority>
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/tag/magnolia/</loc>
+            <priority>0.75</priority>
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/tag/rubymine/</loc>
+            <priority>0.75</priority>
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/tag/debugger/</loc>
+            <priority>0.75</priority>
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/tag/youtube/</loc>
+            <priority>0.75</priority>
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/tag/3d print/</loc>
+            <priority>0.75</priority>
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/tag/m3d/</loc>
+            <priority>0.75</priority>
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/tag/micro/</loc>
+            <priority>0.75</priority>
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/tag/kickstarter/</loc>
+            <priority>0.75</priority>
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/tag/thingiverse/</loc>
+            <priority>0.75</priority>
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/tag/useless-box/</loc>
+            <priority>0.75</priority>
+        </url>
+    
+        <url>
+            <loc>http://www.code-n-fold.com/tag/arduino/</loc>
+            <priority>0.75</priority>
+        </url>
+    
 </urlset>

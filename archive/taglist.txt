@@ -1,4 +1,57 @@
----
----
-{% for tag in site.tags %}{{ tag[0] }}
-{% endfor %}
+code
+presentation
+git
+bash
+mysql
+sql
+sqlite
+disk tool
+osx
+utility
+gitlabhq
+gitolite
+bad code
+coding pattern
+Subversion
+tooling
+MacBook Pro
+reuse
+tinkering
+encoding
+fix
+software
+sql alter table
+utf8
+centos
+snippet
+devise
+rails
+ci
+git hooks
+hudson
+rcov
+namics
+skills
+analysis
+audit
+security
+git migration
+git2git
+ruby
+.htaccess
+capistrano
+cheatsheet
+git-flow
+conference
+magnolia
+rubymine
+debugger
+youtube
+3d print
+m3d
+micro
+kickstarter
+thingiverse
+useless-box
+arduino
+

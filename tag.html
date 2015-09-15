@@ -1,64 +1,6172 @@
----
-layout:   default
-title:    Tag
----
-{% comment%}
-Here we generate all the tags. TODO I'm not sure if i'll be using this
-{% endcomment%}
+<!DOCTYPE html>
+<html>
 
-{% assign rawtags = "" %}
-{% for post in site.posts %}
-{% assign ttags = post.tags | join:'|' | append:'|' %}
-{% assign rawtags = rawtags | append:ttags %}
-{% endfor %}
+  <head>
 
-{% assign rawtags = rawtags | split:'|' | sort %}
+    <title>Tag</title>
 
-{% assign tags = "" %}
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Code and Origami – Software Engineering" />
 
-{% for tag in rawtags %}
-{% if tag != "" %}
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="code 'n fold" />
+    <meta property="og:title" content="Tag" />
+    <meta property="og:description" content="Code and Origami – Software Engineering" />
+    <meta property="og:url" content="http://www.code-n-fold.com/tag.html" />
+    <meta property="og:image" content="http://www.code-n-fold.com/images/" />
 
-{% if tags == "" %}
-{% assign tags = tag | split:'|' %}
-{% endif %}
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Tag" />
+    <meta name="twitter:url" content="http://www.code-n-fold.com/tag.html" />
+    <meta name="twitter:image" content="http://www.code-n-fold.com/images/" />
+    <meta name="twitter:site" content="@code_n_fold" />
+    <meta name="twitter:creator" content="@code_n_fold" />
+    
+    <meta name="twitter:description" content="Code and Origami – Software Engineering">
+    
+    
 
-{% unless tags contains tag %}
-{% assign tags = tags | join:'|' | append:'|' | append:tag | split:'|' %}
-{% endunless %}
-{% endif %}
-{% endfor %}
+
+    <link rel="alternate" href="http://www.code-n-fold.com/feed.xml" type="application/rss+xml" title="Tag" />
+    <link rel="canonical" href="/tag.html" />
+
+    <link rel="stylesheet" href="/assets/normalize.css" />
+    <link rel="stylesheet" href="/assets/animate.css" />
+    <link rel="stylesheet" href="/assets/styles.css" />
+    <link rel="stylesheet" href="/assets/custom.css" />
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-66459836-1', 'auto');
+        ga('send', 'pageview');
+      </script>
+    
+
+  </head>
+
+  <body>
+
+    <header data-animation="fadeInDownBig">
+
+      <a href="/" title="Back to Homepage" class="logo">code <i>'n</i> fold</a>
+
+      
+      
+
+      <button class="toggle">Menu</button>
+      <nav>
+        <ul>
+          <li><a href="/" title="Home">Home</a></li>
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              <li><a href="/about.html" title="About">About</a></li>
+            
+          
+            
+              <li><a href="/projects.html" title="Projects">Projects</a></li>
+            
+          
+            
+              <li><a href="/archive/" title="Archive">Archive</a></li>
+            
+          
+            
+              <li><a href="/categories.html" title="Categories">Categories</a></li>
+            
+          
+
+        <hr/>
+
+          
+            
+              <li><a href="/tools/2011/11/28/convert-mysql-dump-to-sqlite-format.html" title="MySQL 2 SQLite">MySQL 2 SQLite</a></li>
+            
+          
+            
+              <li><a href="/sql/2012/04/12/fix-wrong-utf-8-encodings-in-mysql-table.html" title="Fix MySQL UTF-8 encoding">Fix MySQL UTF-8 encoding</a></li>
+            
+          
+            
+              <li><a href="/deployment/2012/06/25/secure-your-staging-environments-with-capistrano-and-htaccess.html" title="Capistrano and .htaccess">Capistrano and .htaccess</a></li>
+            
+          
+            
+              <li><a href="/projects/2012/08/16/git-flow-cheatsheet.html" title="Git flow cheatsheet">Git flow cheatsheet</a></li>
+            
+          
+        </ul>
+      </nav>
+
+    </header>
+
+
+
+	
+
+
+<section class="content">
+
+	<article>
+
+		<header class="gradient-1" data-animation="fadeInDownBig">
+
+			
+
+<div class="excerpt">
+
+  
+
+	
+
+		
+			<h1><a href="/tag.html" title="Tag">Tag</a></h1>
+		
+
+
+	
+
+	<p></p>
+
+	
+
+</div>
+
+
+	<a href="#" title="Scroll" class="scroll">Scroll</a>
+
+
+
+		</header>
+
+		<div class="body" data-animation="fadeInUp">
+
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <h1 class="page-title">
-  <a href="/blog">Blog</a> | {{ page.title }}
+  <a href="/blog">Blog</a> | Tag
 </h1>
 <br/>
 
 <div class="posts">
 <p>
-{% for tag in tags %}
-<a href="#{{ tag | slugify }}" class="codinfox-tag-mark"> {{ tag }} </a> &nbsp;&nbsp;
-{% endfor %}
 
-{% for tag in tags %}
-<h2 id="{{ tag | slugify }}">{{ tag }}</h2>
+<a href="#htaccess" class="codinfox-tag-mark"> .htaccess </a> &nbsp;&nbsp;
+
+<a href="#3d-print" class="codinfox-tag-mark"> 3d print </a> &nbsp;&nbsp;
+
+<a href="#macbook-pro" class="codinfox-tag-mark"> MacBook Pro </a> &nbsp;&nbsp;
+
+<a href="#subversion" class="codinfox-tag-mark"> Subversion </a> &nbsp;&nbsp;
+
+<a href="#analysis" class="codinfox-tag-mark"> analysis </a> &nbsp;&nbsp;
+
+<a href="#arduino" class="codinfox-tag-mark"> arduino </a> &nbsp;&nbsp;
+
+<a href="#audit" class="codinfox-tag-mark"> audit </a> &nbsp;&nbsp;
+
+<a href="#bad-code" class="codinfox-tag-mark"> bad code </a> &nbsp;&nbsp;
+
+<a href="#bash" class="codinfox-tag-mark"> bash </a> &nbsp;&nbsp;
+
+<a href="#capistrano" class="codinfox-tag-mark"> capistrano </a> &nbsp;&nbsp;
+
+<a href="#centos" class="codinfox-tag-mark"> centos </a> &nbsp;&nbsp;
+
+<a href="#cheatsheet" class="codinfox-tag-mark"> cheatsheet </a> &nbsp;&nbsp;
+
+<a href="#ci" class="codinfox-tag-mark"> ci </a> &nbsp;&nbsp;
+
+<a href="#code" class="codinfox-tag-mark"> code </a> &nbsp;&nbsp;
+
+<a href="#coding-pattern" class="codinfox-tag-mark"> coding pattern </a> &nbsp;&nbsp;
+
+<a href="#conference" class="codinfox-tag-mark"> conference </a> &nbsp;&nbsp;
+
+<a href="#debugger" class="codinfox-tag-mark"> debugger </a> &nbsp;&nbsp;
+
+<a href="#devise" class="codinfox-tag-mark"> devise </a> &nbsp;&nbsp;
+
+<a href="#disk-tool" class="codinfox-tag-mark"> disk tool </a> &nbsp;&nbsp;
+
+<a href="#encoding" class="codinfox-tag-mark"> encoding </a> &nbsp;&nbsp;
+
+<a href="#fix" class="codinfox-tag-mark"> fix </a> &nbsp;&nbsp;
+
+<a href="#git" class="codinfox-tag-mark"> git </a> &nbsp;&nbsp;
+
+<a href="#git-hooks" class="codinfox-tag-mark"> git hooks </a> &nbsp;&nbsp;
+
+<a href="#git-migration" class="codinfox-tag-mark"> git migration </a> &nbsp;&nbsp;
+
+<a href="#git-flow" class="codinfox-tag-mark"> git-flow </a> &nbsp;&nbsp;
+
+<a href="#git2git" class="codinfox-tag-mark"> git2git </a> &nbsp;&nbsp;
+
+<a href="#gitlabhq" class="codinfox-tag-mark"> gitlabhq </a> &nbsp;&nbsp;
+
+<a href="#gitolite" class="codinfox-tag-mark"> gitolite </a> &nbsp;&nbsp;
+
+<a href="#hudson" class="codinfox-tag-mark"> hudson </a> &nbsp;&nbsp;
+
+<a href="#kickstarter" class="codinfox-tag-mark"> kickstarter </a> &nbsp;&nbsp;
+
+<a href="#m3d" class="codinfox-tag-mark"> m3d </a> &nbsp;&nbsp;
+
+<a href="#magnolia" class="codinfox-tag-mark"> magnolia </a> &nbsp;&nbsp;
+
+<a href="#micro" class="codinfox-tag-mark"> micro </a> &nbsp;&nbsp;
+
+<a href="#mysql" class="codinfox-tag-mark"> mysql </a> &nbsp;&nbsp;
+
+<a href="#namics" class="codinfox-tag-mark"> namics </a> &nbsp;&nbsp;
+
+<a href="#osx" class="codinfox-tag-mark"> osx </a> &nbsp;&nbsp;
+
+<a href="#presentation" class="codinfox-tag-mark"> presentation </a> &nbsp;&nbsp;
+
+<a href="#rails" class="codinfox-tag-mark"> rails </a> &nbsp;&nbsp;
+
+<a href="#rcov" class="codinfox-tag-mark"> rcov </a> &nbsp;&nbsp;
+
+<a href="#reuse" class="codinfox-tag-mark"> reuse </a> &nbsp;&nbsp;
+
+<a href="#ruby" class="codinfox-tag-mark"> ruby </a> &nbsp;&nbsp;
+
+<a href="#rubymine" class="codinfox-tag-mark"> rubymine </a> &nbsp;&nbsp;
+
+<a href="#security" class="codinfox-tag-mark"> security </a> &nbsp;&nbsp;
+
+<a href="#skills" class="codinfox-tag-mark"> skills </a> &nbsp;&nbsp;
+
+<a href="#snippet" class="codinfox-tag-mark"> snippet </a> &nbsp;&nbsp;
+
+<a href="#software" class="codinfox-tag-mark"> software </a> &nbsp;&nbsp;
+
+<a href="#sql" class="codinfox-tag-mark"> sql </a> &nbsp;&nbsp;
+
+<a href="#sql-alter-table" class="codinfox-tag-mark"> sql alter table </a> &nbsp;&nbsp;
+
+<a href="#sqlite" class="codinfox-tag-mark"> sqlite </a> &nbsp;&nbsp;
+
+<a href="#thingiverse" class="codinfox-tag-mark"> thingiverse </a> &nbsp;&nbsp;
+
+<a href="#tinkering" class="codinfox-tag-mark"> tinkering </a> &nbsp;&nbsp;
+
+<a href="#tooling" class="codinfox-tag-mark"> tooling </a> &nbsp;&nbsp;
+
+<a href="#useless-box" class="codinfox-tag-mark"> useless-box </a> &nbsp;&nbsp;
+
+<a href="#utf8" class="codinfox-tag-mark"> utf8 </a> &nbsp;&nbsp;
+
+<a href="#utility" class="codinfox-tag-mark"> utility </a> &nbsp;&nbsp;
+
+<a href="#youtube" class="codinfox-tag-mark"> youtube </a> &nbsp;&nbsp;
+
+
+
+<h2 id="htaccess">.htaccess</h2>
 <ul class="codinfox-category-list">
-  {% for post in site.posts %}
-  {% if post.tags contains tag %}
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   <li>
     <h3>
-      <a href="{{ post.url }}">
-        {{ post.title }}
-        <small>{{ post.date | date_to_string }}</small>
+      <a href="/deployment/2012/06/25/secure-your-staging-environments-with-capistrano-and-htaccess.html">
+        Capistrano and .htaccess
+        <small>25 Jun 2012</small>
       </a>
-      {% for tag in post.tags %}
-      <a class="codinfox-tag-mark" href="/blog/tag/#{{ tag | slugify }}">{{ tag }}</a>
-      {% endfor %}
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#htaccess">.htaccess</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#capistrano">capistrano</a>
+      
     </h3>
   </li>
-  {% endif %}
-  {% endfor %}
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 </ul>
-{% endfor %}
+
+<h2 id="3d-print">3d print</h2>
+<ul class="codinfox-category-list">
+  
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/3d%20print/2015/09/14/chinese-dragon.html">
+        3D Print - Chinese dragon
+        <small>14 Sep 2015</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#3d-print">3d print</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#m3d">m3d</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#micro">micro</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#thingiverse">thingiverse</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/3d%20print/2015/09/08/t-rex.html">
+        3D Print - T-Rex Skull
+        <small>08 Sep 2015</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#3d-print">3d print</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#m3d">m3d</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#micro">micro</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#thingiverse">thingiverse</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/3d%20print/2015/09/03/hand-of-the-king-pin.html">
+        3D Print - Hand Of The King Pin from Game of Thrones
+        <small>03 Sep 2015</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#3d-print">3d print</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#m3d">m3d</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#micro">micro</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#thingiverse">thingiverse</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/3d%20print/2015/08/31/happy-octopus.html">
+        3D Print - The cute octopus sd-card holder
+        <small>31 Aug 2015</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#3d-print">3d print</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#m3d">m3d</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#micro">micro</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#thingiverse">thingiverse</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/gadgets/2015/08/25/m3d-print.html">
+        The Micro 3D Printer
+        <small>25 Aug 2015</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#3d-print">3d print</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#m3d">m3d</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#micro">micro</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#kickstarter">kickstarter</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</ul>
+
+<h2 id="macbook-pro">MacBook Pro</h2>
+<ul class="codinfox-category-list">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/diy/2012/03/22/mypad-build-your-own-clipboard-out-of-an-old-macbook-pro.html">
+        myPad - Build your own clipboard out of an old MacBook Pro
+        <small>22 Mar 2012</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#macbook-pro">MacBook Pro</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#reuse">reuse</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#tinkering">tinkering</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</ul>
+
+<h2 id="subversion">Subversion</h2>
+<ul class="codinfox-category-list">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/talks/2012/02/13/git-differences-to-subversion-branching-and-tooling.html">
+        Git - Differences to Subversion, branching and tooling
+        <small>13 Feb 2012</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#git">git</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#subversion">Subversion</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#tooling">tooling</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</ul>
+
+<h2 id="analysis">analysis</h2>
+<ul class="codinfox-category-list">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/programming/2012/06/18/brakeman-rails-security-analytics-tool.html">
+        Brakeman - Rails security analytics tool
+        <small>18 Jun 2012</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#analysis">analysis</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#audit">audit</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#rails">rails</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#security">security</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</ul>
+
+<h2 id="arduino">arduino</h2>
+<ul class="codinfox-category-list">
+  
+  
+  <li>
+    <h3>
+      <a href="/diy/2015/09/15/useless-box-sneak-peek.html">
+        Useless Box - Sneak Peek
+        <small>15 Sep 2015</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#useless-box">useless-box</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#arduino">arduino</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#tinkering">tinkering</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</ul>
+
+<h2 id="audit">audit</h2>
+<ul class="codinfox-category-list">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/programming/2012/06/18/brakeman-rails-security-analytics-tool.html">
+        Brakeman - Rails security analytics tool
+        <small>18 Jun 2012</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#analysis">analysis</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#audit">audit</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#rails">rails</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#security">security</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</ul>
+
+<h2 id="bad-code">bad code</h2>
+<ul class="codinfox-category-list">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/programming/2012/02/03/the-arrow-coding-pattern.html">
+        The Arrow - Coding Pattern?!
+        <small>03 Feb 2012</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#bad-code">bad code</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#coding-pattern">coding pattern</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</ul>
+
+<h2 id="bash">bash</h2>
+<ul class="codinfox-category-list">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/programming/2012/01/26/easy-forking-with-git.html">
+        Easy forking with git
+        <small>26 Jan 2012</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#bash">bash</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#git">git</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/tools/2011/11/28/convert-mysql-dump-to-sqlite-format.html">
+        MySQL 2 SQLite
+        <small>28 Nov 2011</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#bash">bash</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#mysql">mysql</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#sql">sql</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#sqlite">sqlite</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+</ul>
+
+<h2 id="capistrano">capistrano</h2>
+<ul class="codinfox-category-list">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/deployment/2012/06/25/secure-your-staging-environments-with-capistrano-and-htaccess.html">
+        Capistrano and .htaccess
+        <small>25 Jun 2012</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#htaccess">.htaccess</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#capistrano">capistrano</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</ul>
+
+<h2 id="centos">centos</h2>
+<ul class="codinfox-category-list">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/programming/2012/04/20/install-node-js-on-centos-5-5.html">
+        Install Node.js on Centos 5.5
+        <small>20 Apr 2012</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#centos">centos</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#snippet">snippet</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</ul>
+
+<h2 id="cheatsheet">cheatsheet</h2>
+<ul class="codinfox-category-list">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/projects/2012/08/16/git-flow-cheatsheet.html">
+        Git flow cheatsheet
+        <small>16 Aug 2012</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#cheatsheet">cheatsheet</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#git-flow">git-flow</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#git">git</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</ul>
+
+<h2 id="ci">ci</h2>
+<ul class="codinfox-category-list">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/programming/2012/04/24/git-rails-rcov-jenkins-super-simple-ci-continuous-integration.html">
+        GIT + Rails + Rcov + Jenkins = Continuous Integration
+        <small>24 Apr 2012</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#ci">ci</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#git-hooks">git hooks</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#hudson">hudson</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#rails">rails</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#rcov">rcov</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</ul>
+
+<h2 id="code">code</h2>
+<ul class="codinfox-category-list">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/talks/2011/11/22/clean-code-presentation-htgw-konstanz.html">
+        Clean Code presentation @ HTGW Konstanz
+        <small>22 Nov 2011</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#code">code</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#presentation">presentation</a>
+      
+    </h3>
+  </li>
+  
+  
+</ul>
+
+<h2 id="coding-pattern">coding pattern</h2>
+<ul class="codinfox-category-list">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/programming/2012/02/03/the-arrow-coding-pattern.html">
+        The Arrow - Coding Pattern?!
+        <small>03 Feb 2012</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#bad-code">bad code</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#coding-pattern">coding pattern</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</ul>
+
+<h2 id="conference">conference</h2>
+<ul class="codinfox-category-list">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/conferences/2012/09/10/magnolia-conference-2012.html">
+        Magnolia Conference 2012
+        <small>10 Sep 2012</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#conference">conference</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#magnolia">magnolia</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</ul>
+
+<h2 id="debugger">debugger</h2>
+<ul class="codinfox-category-list">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/programming/2012/09/14/rubymine-and-ruby-1-9-x-debugging-get-it-working.html">
+        Rubymine and Ruby 1.9.x debugging - get it working
+        <small>14 Sep 2012</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#rubymine">rubymine</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#debugger">debugger</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</ul>
+
+<h2 id="devise">devise</h2>
+<ul class="codinfox-category-list">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/programming/2012/04/21/rails-3-1-devise_for-breaks-dbmigrate-fix-6.html">
+        Rails 3.1 devise_for breaks db:migrate - fix
+        <small>21 Apr 2012</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#devise">devise</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#rails">rails</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</ul>
+
+<h2 id="disk-tool">disk tool</h2>
+<ul class="codinfox-category-list">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/tools/2011/12/22/daisydisk-analyse-your-disk-space.html">
+        DaisyDisk - Analyse your disk space
+        <small>22 Dec 2011</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#disk-tool">disk tool</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#osx">osx</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</ul>
+
+<h2 id="encoding">encoding</h2>
+<ul class="codinfox-category-list">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/sql/2012/04/12/fix-wrong-utf-8-encodings-in-mysql-table.html">
+        Fix MySQL UTF-8 encoding
+        <small>12 Apr 2012</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#encoding">encoding</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#fix">fix</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#software">software</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#sql-alter-table">sql alter table</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#utf8">utf8</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</ul>
+
+<h2 id="fix">fix</h2>
+<ul class="codinfox-category-list">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/sql/2012/04/12/fix-wrong-utf-8-encodings-in-mysql-table.html">
+        Fix MySQL UTF-8 encoding
+        <small>12 Apr 2012</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#encoding">encoding</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#fix">fix</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#software">software</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#sql-alter-table">sql alter table</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#utf8">utf8</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</ul>
+
+<h2 id="git">git</h2>
+<ul class="codinfox-category-list">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/projects/2012/08/16/git-flow-cheatsheet.html">
+        Git flow cheatsheet
+        <small>16 Aug 2012</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#cheatsheet">cheatsheet</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#git-flow">git-flow</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#git">git</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/programming/2012/06/19/git-2-git-migration-script.html">
+        Git 2 git migration script
+        <small>19 Jun 2012</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#git">git</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#git-migration">git migration</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#git2git">git2git</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#ruby">ruby</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/talks/2012/02/13/git-differences-to-subversion-branching-and-tooling.html">
+        Git - Differences to Subversion, branching and tooling
+        <small>13 Feb 2012</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#git">git</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#subversion">Subversion</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#tooling">tooling</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/programming/2012/02/03/gitlabhq-gitolite-apache-passenger-and-centos-5-5.html">
+        Gitlabhq, Gitolite, Apache Passenger and Centos 5.5
+        <small>03 Feb 2012</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#git">git</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#gitlabhq">gitlabhq</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#gitolite">gitolite</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/programming/2012/01/26/easy-forking-with-git.html">
+        Easy forking with git
+        <small>26 Jan 2012</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#bash">bash</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#git">git</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/talks/2011/11/22/git-why-how.html">
+        Git! Why? How?
+        <small>22 Nov 2011</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#git">git</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#presentation">presentation</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  
+  
+  
+</ul>
+
+<h2 id="git-hooks">git hooks</h2>
+<ul class="codinfox-category-list">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/programming/2012/04/24/git-rails-rcov-jenkins-super-simple-ci-continuous-integration.html">
+        GIT + Rails + Rcov + Jenkins = Continuous Integration
+        <small>24 Apr 2012</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#ci">ci</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#git-hooks">git hooks</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#hudson">hudson</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#rails">rails</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#rcov">rcov</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</ul>
+
+<h2 id="git-migration">git migration</h2>
+<ul class="codinfox-category-list">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/programming/2012/06/19/git-2-git-migration-script.html">
+        Git 2 git migration script
+        <small>19 Jun 2012</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#git">git</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#git-migration">git migration</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#git2git">git2git</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#ruby">ruby</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</ul>
+
+<h2 id="git-flow">git-flow</h2>
+<ul class="codinfox-category-list">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/projects/2012/08/16/git-flow-cheatsheet.html">
+        Git flow cheatsheet
+        <small>16 Aug 2012</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#cheatsheet">cheatsheet</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#git-flow">git-flow</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#git">git</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</ul>
+
+<h2 id="git2git">git2git</h2>
+<ul class="codinfox-category-list">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/programming/2012/06/19/git-2-git-migration-script.html">
+        Git 2 git migration script
+        <small>19 Jun 2012</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#git">git</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#git-migration">git migration</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#git2git">git2git</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#ruby">ruby</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</ul>
+
+<h2 id="gitlabhq">gitlabhq</h2>
+<ul class="codinfox-category-list">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/programming/2012/02/03/gitlabhq-gitolite-apache-passenger-and-centos-5-5.html">
+        Gitlabhq, Gitolite, Apache Passenger and Centos 5.5
+        <small>03 Feb 2012</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#git">git</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#gitlabhq">gitlabhq</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#gitolite">gitolite</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</ul>
+
+<h2 id="gitolite">gitolite</h2>
+<ul class="codinfox-category-list">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/programming/2012/02/03/gitlabhq-gitolite-apache-passenger-and-centos-5-5.html">
+        Gitlabhq, Gitolite, Apache Passenger and Centos 5.5
+        <small>03 Feb 2012</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#git">git</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#gitlabhq">gitlabhq</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#gitolite">gitolite</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</ul>
+
+<h2 id="hudson">hudson</h2>
+<ul class="codinfox-category-list">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/programming/2012/04/24/git-rails-rcov-jenkins-super-simple-ci-continuous-integration.html">
+        GIT + Rails + Rcov + Jenkins = Continuous Integration
+        <small>24 Apr 2012</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#ci">ci</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#git-hooks">git hooks</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#hudson">hudson</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#rails">rails</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#rcov">rcov</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</ul>
+
+<h2 id="kickstarter">kickstarter</h2>
+<ul class="codinfox-category-list">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/gadgets/2015/08/25/m3d-print.html">
+        The Micro 3D Printer
+        <small>25 Aug 2015</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#3d-print">3d print</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#m3d">m3d</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#micro">micro</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#kickstarter">kickstarter</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</ul>
+
+<h2 id="m3d">m3d</h2>
+<ul class="codinfox-category-list">
+  
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/3d%20print/2015/09/14/chinese-dragon.html">
+        3D Print - Chinese dragon
+        <small>14 Sep 2015</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#3d-print">3d print</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#m3d">m3d</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#micro">micro</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#thingiverse">thingiverse</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/3d%20print/2015/09/08/t-rex.html">
+        3D Print - T-Rex Skull
+        <small>08 Sep 2015</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#3d-print">3d print</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#m3d">m3d</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#micro">micro</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#thingiverse">thingiverse</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/3d%20print/2015/09/03/hand-of-the-king-pin.html">
+        3D Print - Hand Of The King Pin from Game of Thrones
+        <small>03 Sep 2015</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#3d-print">3d print</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#m3d">m3d</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#micro">micro</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#thingiverse">thingiverse</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/3d%20print/2015/08/31/happy-octopus.html">
+        3D Print - The cute octopus sd-card holder
+        <small>31 Aug 2015</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#3d-print">3d print</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#m3d">m3d</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#micro">micro</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#thingiverse">thingiverse</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/gadgets/2015/08/25/m3d-print.html">
+        The Micro 3D Printer
+        <small>25 Aug 2015</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#3d-print">3d print</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#m3d">m3d</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#micro">micro</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#kickstarter">kickstarter</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</ul>
+
+<h2 id="magnolia">magnolia</h2>
+<ul class="codinfox-category-list">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/conferences/2012/09/10/magnolia-conference-2012.html">
+        Magnolia Conference 2012
+        <small>10 Sep 2012</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#conference">conference</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#magnolia">magnolia</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</ul>
+
+<h2 id="micro">micro</h2>
+<ul class="codinfox-category-list">
+  
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/3d%20print/2015/09/14/chinese-dragon.html">
+        3D Print - Chinese dragon
+        <small>14 Sep 2015</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#3d-print">3d print</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#m3d">m3d</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#micro">micro</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#thingiverse">thingiverse</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/3d%20print/2015/09/08/t-rex.html">
+        3D Print - T-Rex Skull
+        <small>08 Sep 2015</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#3d-print">3d print</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#m3d">m3d</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#micro">micro</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#thingiverse">thingiverse</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/3d%20print/2015/09/03/hand-of-the-king-pin.html">
+        3D Print - Hand Of The King Pin from Game of Thrones
+        <small>03 Sep 2015</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#3d-print">3d print</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#m3d">m3d</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#micro">micro</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#thingiverse">thingiverse</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/3d%20print/2015/08/31/happy-octopus.html">
+        3D Print - The cute octopus sd-card holder
+        <small>31 Aug 2015</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#3d-print">3d print</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#m3d">m3d</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#micro">micro</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#thingiverse">thingiverse</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/gadgets/2015/08/25/m3d-print.html">
+        The Micro 3D Printer
+        <small>25 Aug 2015</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#3d-print">3d print</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#m3d">m3d</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#micro">micro</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#kickstarter">kickstarter</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</ul>
+
+<h2 id="mysql">mysql</h2>
+<ul class="codinfox-category-list">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/tools/2011/11/28/convert-mysql-dump-to-sqlite-format.html">
+        MySQL 2 SQLite
+        <small>28 Nov 2011</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#bash">bash</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#mysql">mysql</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#sql">sql</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#sqlite">sqlite</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+</ul>
+
+<h2 id="namics">namics</h2>
+<ul class="codinfox-category-list">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/projects/2012/06/05/skills-my-latest-project.html">
+        Skills - my latest project
+        <small>05 Jun 2012</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#namics">namics</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#skills">skills</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</ul>
+
+<h2 id="osx">osx</h2>
+<ul class="codinfox-category-list">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/tools/2012/01/16/watch-folders-with-hazel.html">
+        Watch folders with Hazel!
+        <small>16 Jan 2012</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#osx">osx</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#utility">utility</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/tools/2011/12/22/daisydisk-analyse-your-disk-space.html">
+        DaisyDisk - Analyse your disk space
+        <small>22 Dec 2011</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#disk-tool">disk tool</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#osx">osx</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</ul>
+
+<h2 id="presentation">presentation</h2>
+<ul class="codinfox-category-list">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/talks/2011/11/22/git-why-how.html">
+        Git! Why? How?
+        <small>22 Nov 2011</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#git">git</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#presentation">presentation</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/talks/2011/11/22/clean-code-presentation-htgw-konstanz.html">
+        Clean Code presentation @ HTGW Konstanz
+        <small>22 Nov 2011</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#code">code</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#presentation">presentation</a>
+      
+    </h3>
+  </li>
+  
+  
+</ul>
+
+<h2 id="rails">rails</h2>
+<ul class="codinfox-category-list">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/programming/2012/06/18/brakeman-rails-security-analytics-tool.html">
+        Brakeman - Rails security analytics tool
+        <small>18 Jun 2012</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#analysis">analysis</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#audit">audit</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#rails">rails</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#security">security</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/programming/2012/04/24/git-rails-rcov-jenkins-super-simple-ci-continuous-integration.html">
+        GIT + Rails + Rcov + Jenkins = Continuous Integration
+        <small>24 Apr 2012</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#ci">ci</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#git-hooks">git hooks</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#hudson">hudson</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#rails">rails</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#rcov">rcov</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/programming/2012/04/21/rails-3-1-devise_for-breaks-dbmigrate-fix-6.html">
+        Rails 3.1 devise_for breaks db:migrate - fix
+        <small>21 Apr 2012</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#devise">devise</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#rails">rails</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</ul>
+
+<h2 id="rcov">rcov</h2>
+<ul class="codinfox-category-list">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/programming/2012/04/24/git-rails-rcov-jenkins-super-simple-ci-continuous-integration.html">
+        GIT + Rails + Rcov + Jenkins = Continuous Integration
+        <small>24 Apr 2012</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#ci">ci</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#git-hooks">git hooks</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#hudson">hudson</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#rails">rails</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#rcov">rcov</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</ul>
+
+<h2 id="reuse">reuse</h2>
+<ul class="codinfox-category-list">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/diy/2012/03/22/mypad-build-your-own-clipboard-out-of-an-old-macbook-pro.html">
+        myPad - Build your own clipboard out of an old MacBook Pro
+        <small>22 Mar 2012</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#macbook-pro">MacBook Pro</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#reuse">reuse</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#tinkering">tinkering</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</ul>
+
+<h2 id="ruby">ruby</h2>
+<ul class="codinfox-category-list">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/programming/2012/06/19/git-2-git-migration-script.html">
+        Git 2 git migration script
+        <small>19 Jun 2012</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#git">git</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#git-migration">git migration</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#git2git">git2git</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#ruby">ruby</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</ul>
+
+<h2 id="rubymine">rubymine</h2>
+<ul class="codinfox-category-list">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/programming/2012/09/14/rubymine-and-ruby-1-9-x-debugging-get-it-working.html">
+        Rubymine and Ruby 1.9.x debugging - get it working
+        <small>14 Sep 2012</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#rubymine">rubymine</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#debugger">debugger</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</ul>
+
+<h2 id="security">security</h2>
+<ul class="codinfox-category-list">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/programming/2012/06/18/brakeman-rails-security-analytics-tool.html">
+        Brakeman - Rails security analytics tool
+        <small>18 Jun 2012</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#analysis">analysis</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#audit">audit</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#rails">rails</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#security">security</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</ul>
+
+<h2 id="skills">skills</h2>
+<ul class="codinfox-category-list">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/projects/2012/06/05/skills-my-latest-project.html">
+        Skills - my latest project
+        <small>05 Jun 2012</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#namics">namics</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#skills">skills</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</ul>
+
+<h2 id="snippet">snippet</h2>
+<ul class="codinfox-category-list">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/programming/2012/04/20/install-node-js-on-centos-5-5.html">
+        Install Node.js on Centos 5.5
+        <small>20 Apr 2012</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#centos">centos</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#snippet">snippet</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</ul>
+
+<h2 id="software">software</h2>
+<ul class="codinfox-category-list">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/sql/2012/04/12/fix-wrong-utf-8-encodings-in-mysql-table.html">
+        Fix MySQL UTF-8 encoding
+        <small>12 Apr 2012</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#encoding">encoding</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#fix">fix</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#software">software</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#sql-alter-table">sql alter table</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#utf8">utf8</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</ul>
+
+<h2 id="sql">sql</h2>
+<ul class="codinfox-category-list">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/tools/2011/11/28/convert-mysql-dump-to-sqlite-format.html">
+        MySQL 2 SQLite
+        <small>28 Nov 2011</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#bash">bash</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#mysql">mysql</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#sql">sql</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#sqlite">sqlite</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+</ul>
+
+<h2 id="sql-alter-table">sql alter table</h2>
+<ul class="codinfox-category-list">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/sql/2012/04/12/fix-wrong-utf-8-encodings-in-mysql-table.html">
+        Fix MySQL UTF-8 encoding
+        <small>12 Apr 2012</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#encoding">encoding</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#fix">fix</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#software">software</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#sql-alter-table">sql alter table</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#utf8">utf8</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</ul>
+
+<h2 id="sqlite">sqlite</h2>
+<ul class="codinfox-category-list">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/tools/2011/11/28/convert-mysql-dump-to-sqlite-format.html">
+        MySQL 2 SQLite
+        <small>28 Nov 2011</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#bash">bash</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#mysql">mysql</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#sql">sql</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#sqlite">sqlite</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+</ul>
+
+<h2 id="thingiverse">thingiverse</h2>
+<ul class="codinfox-category-list">
+  
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/3d%20print/2015/09/14/chinese-dragon.html">
+        3D Print - Chinese dragon
+        <small>14 Sep 2015</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#3d-print">3d print</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#m3d">m3d</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#micro">micro</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#thingiverse">thingiverse</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/3d%20print/2015/09/08/t-rex.html">
+        3D Print - T-Rex Skull
+        <small>08 Sep 2015</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#3d-print">3d print</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#m3d">m3d</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#micro">micro</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#thingiverse">thingiverse</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/3d%20print/2015/09/03/hand-of-the-king-pin.html">
+        3D Print - Hand Of The King Pin from Game of Thrones
+        <small>03 Sep 2015</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#3d-print">3d print</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#m3d">m3d</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#micro">micro</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#thingiverse">thingiverse</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/3d%20print/2015/08/31/happy-octopus.html">
+        3D Print - The cute octopus sd-card holder
+        <small>31 Aug 2015</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#3d-print">3d print</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#m3d">m3d</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#micro">micro</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#thingiverse">thingiverse</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</ul>
+
+<h2 id="tinkering">tinkering</h2>
+<ul class="codinfox-category-list">
+  
+  
+  <li>
+    <h3>
+      <a href="/diy/2015/09/15/useless-box-sneak-peek.html">
+        Useless Box - Sneak Peek
+        <small>15 Sep 2015</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#useless-box">useless-box</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#arduino">arduino</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#tinkering">tinkering</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/diy/2012/03/22/mypad-build-your-own-clipboard-out-of-an-old-macbook-pro.html">
+        myPad - Build your own clipboard out of an old MacBook Pro
+        <small>22 Mar 2012</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#macbook-pro">MacBook Pro</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#reuse">reuse</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#tinkering">tinkering</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</ul>
+
+<h2 id="tooling">tooling</h2>
+<ul class="codinfox-category-list">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/talks/2012/02/13/git-differences-to-subversion-branching-and-tooling.html">
+        Git - Differences to Subversion, branching and tooling
+        <small>13 Feb 2012</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#git">git</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#subversion">Subversion</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#tooling">tooling</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</ul>
+
+<h2 id="useless-box">useless-box</h2>
+<ul class="codinfox-category-list">
+  
+  
+  <li>
+    <h3>
+      <a href="/diy/2015/09/15/useless-box-sneak-peek.html">
+        Useless Box - Sneak Peek
+        <small>15 Sep 2015</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#useless-box">useless-box</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#arduino">arduino</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#tinkering">tinkering</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</ul>
+
+<h2 id="utf8">utf8</h2>
+<ul class="codinfox-category-list">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/sql/2012/04/12/fix-wrong-utf-8-encodings-in-mysql-table.html">
+        Fix MySQL UTF-8 encoding
+        <small>12 Apr 2012</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#encoding">encoding</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#fix">fix</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#software">software</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#sql-alter-table">sql alter table</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#utf8">utf8</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</ul>
+
+<h2 id="utility">utility</h2>
+<ul class="codinfox-category-list">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/tools/2012/01/16/watch-folders-with-hazel.html">
+        Watch folders with Hazel!
+        <small>16 Jan 2012</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#osx">osx</a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#utility">utility</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</ul>
+
+<h2 id="youtube">youtube</h2>
+<ul class="codinfox-category-list">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+    <h3>
+      <a href="/fun/2015/08/24/trust-me-im-an-engineer.html">
+        Trust me, I'm an engineer
+        <small>24 Aug 2015</small>
+      </a>
+      
+      <a class="codinfox-tag-mark" href="/blog/tag/#youtube">youtube</a>
+      
+    </h3>
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</ul>
+
 
 </div>
+
+
+		</div>
+
+		<footer>
+
+			
+
+  <div class="meta">
+
+    <div class="author" data-animation="fadeInUp">
+                  
+      <span class="title">Written by</span>
+
+      <h4>Daniel Kummer</h4>
+      <p>I'm a software engineer who also enjoys lots of other things like diving, tinkering, photography, whiskey and much more...</p>
+
+      
+        <ul>
+          <li><a href="https://twitter.com/code_n_fold" title="Twitter" class="icon twitter">Twitter</a></li>
+          <li><a href="https://www.facebook.com/daniel.kummer" title="Facebook" class="icon facebook">Facebook</a></li>
+          
+          <li><a href="https://www.linkedin.com/pub/daniel-kummer/58/344/528" title="LinkedIn" class="icon linkedin">LinkedIn</a></li>
+          
+          
+          
+          <li><a href="feed://code-n-fold.com/feed.xml" title="RSS" class="icon rss">RSS</a></li>
+        </ul>
+      
+
+    </div>
+
+    <div class="share" data-animation="fadeInUp">
+                  
+      <span class="title">Share</span>
+
+      <ul>
+        <li><a href="https://twitter.com/home?status=Code%20and%20Origami%20%E2%80%93%20Software%20Engineering%20http://www.code-n-fold.com/tag.html" title="Tweet" class="icon twitter">Tweet</a></li>
+        <li><a href="https://www.facebook.com/sharer/sharer.php?u=http://www.code-n-fold.com/tag.html" title="Like" class="icon facebook">Like</a></li>
+        <li><a href="https://plus.google.com/share?url=http://www.code-n-fold.com/tag.html" title="+1" class="icon google">+1</a></li>
+      </ul>
+
+    </div>
+
+  </div>
+
+
+
+			
+
+			
+
+
+
+		</footer>
+
+	</article>
+
+</section>
+
+
+
+    
+
+      <footer data-animation="fadeInUp">
+        <div class="copyright">
+          <b>Copyright 2015 Daniel Kummer.</b> All Rights Reserved.
+        	<a href="mailto:daniel.kummer@gmail.com" title="Send E-Mail">Contact</a>
+        	<a href="/feed.xml" title="Subscribe to Feed">RSS</a>
+        </div>
+      </footer>
+      
+    
+
+    <script type="application/ld+json">
+    { "@context" : "http://schema.org",
+      "@type" : "Person",
+      "name" : "Daniel Kummer",
+      "url" : "http://www.code-n-fold.com",
+      "sameAs" : [ "http://www.facebook.com/daniel.kummer",
+        "http://www.twitter.com/code_n_fold"]
+    }
+    </script>
+    
+    <script src="/assets/jquery-2.1.1.min.js"></script>
+    <script src="/assets/viewportchecker.js"></script>
+    <script src="/assets/scripts.js"></script>
+
+  </body>
+
+</html>

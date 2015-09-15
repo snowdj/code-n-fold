@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <title>Clean Code presentation @ HTGW Konstanz</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Code and Origami – Software Engineering" />
+
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="code 'n fold" />
+    <meta property="og:title" content="Clean Code presentation @ HTGW Konstanz" />
+    <meta property="og:description" content="Code and Origami – Software Engineering" />
+    <meta property="og:url" content="http://www.code-n-fold.com/talks/2011/11/22/clean-code-presentation-htgw-konstanz.html" />
+    <meta property="og:image" content="http://www.code-n-fold.com/images/" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Clean Code presentation @ HTGW Konstanz" />
+    <meta name="twitter:url" content="http://www.code-n-fold.com/talks/2011/11/22/clean-code-presentation-htgw-konstanz.html" />
+    <meta name="twitter:image" content="http://www.code-n-fold.com/images/" />
+    <meta name="twitter:site" content="@code_n_fold" />
+    <meta name="twitter:creator" content="@code_n_fold" />
+    
+    <meta name="twitter:description" content="Code and Origami – Software Engineering">
+    
+    
+
+
+    <link rel="alternate" href="http://www.code-n-fold.com/feed.xml" type="application/rss+xml" title="Clean Code presentation @ HTGW Konstanz" />
+    <link rel="canonical" href="/talks/2011/11/22/clean-code-presentation-htgw-konstanz.html" />
+
+    <link rel="stylesheet" href="/assets/normalize.css" />
+    <link rel="stylesheet" href="/assets/animate.css" />
+    <link rel="stylesheet" href="/assets/styles.css" />
+    <link rel="stylesheet" href="/assets/custom.css" />
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-66459836-1', 'auto');
+        ga('send', 'pageview');
+      </script>
+    
+
+  </head>
+
+  <body>
+
+    <header data-animation="fadeInDownBig">
+
+      <a href="/" title="Back to Homepage" class="logo">code <i>'n</i> fold</a>
+
+      
+      
+
+      <button class="toggle">Menu</button>
+      <nav>
+        <ul>
+          <li><a href="/" title="Home">Home</a></li>
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              <li><a href="/about.html" title="About">About</a></li>
+            
+          
+            
+              <li><a href="/projects.html" title="Projects">Projects</a></li>
+            
+          
+            
+              <li><a href="/archive/" title="Archive">Archive</a></li>
+            
+          
+            
+              <li><a href="/categories.html" title="Categories">Categories</a></li>
+            
+          
+
+        <hr/>
+
+          
+            
+              <li><a href="/tools/2011/11/28/convert-mysql-dump-to-sqlite-format.html" title="MySQL 2 SQLite">MySQL 2 SQLite</a></li>
+            
+          
+            
+              <li><a href="/sql/2012/04/12/fix-wrong-utf-8-encodings-in-mysql-table.html" title="Fix MySQL UTF-8 encoding">Fix MySQL UTF-8 encoding</a></li>
+            
+          
+            
+              <li><a href="/deployment/2012/06/25/secure-your-staging-environments-with-capistrano-and-htaccess.html" title="Capistrano and .htaccess">Capistrano and .htaccess</a></li>
+            
+          
+            
+              <li><a href="/projects/2012/08/16/git-flow-cheatsheet.html" title="Git flow cheatsheet">Git flow cheatsheet</a></li>
+            
+          
+        </ul>
+      </nav>
+
+    </header>
+
+
+
+	
+
+
+<section class="content">
+
+	<article>
+
+		<header class="gradient-1" data-animation="fadeInDownBig">
+
+			
+
+<div class="excerpt">
+
+  
+    <span class="title">1 minute</span>
+  
+
+	
+
+		
+			<h1><a href="/talks/2011/11/22/clean-code-presentation-htgw-konstanz.html" title="Clean Code presentation @ HTGW Konstanz">Clean Code presentation @ HTGW Konstanz</a></h1>
+		
+
+
+	
+
+	<p>I recently held a presentation about clean code at the university of applied sciences in Konstanz Germany. I'll remember it as a great experience and a great, interested crowd.</p>
+
+	
+
+		
+
+			<span class="meta">Published <b>Nov 22, 2011</b>
+
+        
+          in <b>talks</b>
+        
+
+        
+          with tags:
+        
+
+        
+          <a class="tag" href="/tags/code">code</a>
+        
+          <a class="tag" href="/tags/presentation">presentation</a>
+        
+      </span>
+
+		
+
+	
+
+</div>
+
+
+	<a href="#" title="Scroll" class="scroll">Scroll</a>
+
+
+
+		</header>
+
+		<div class="body" data-animation="fadeInUp">
+
+			<p>I’ll take this opportunity to thank the organization commitee of the university. The planning was good and I’ve nothing to complain about. Only we (both I and the university) gravely underestimated the interest in the topic so the room was quite crowded. We were only  able accommodate all listeners after the tables have been carried out and stacked in the floor…</p>
+
+<p>Here as an impression:
+<a title="Konstanz von jabba bei Flickr" href="https://www.flickr.com/photos/jabba/6306917204/"></a></p>
+
+<div class="media image" data-animation="fadeInUp">
+
+	
+		<img src="/images/6306917204_a6b73ebf1a.jpg" alt="HTW Konstanz" />
+	
+
+	
+		<div class="caption" data-animation="fadeInRightBig">
+		  
+		  
+		  	<h4>HTW Konstanz</h4>
+		  
+
+		  
+
+		  
+
+		</div>
+	
+
+</div>
+
+<h2 id="why-is-clean-code-so-important">Why is clean code so important?</h2>
+
+<p>Bad code might work fine or as expecte, sooner or later however you <em>will</em> encounter severe problems; guaranteed!
+Each and every developer knows of the problems arising with bad code in the course of a project entails…
+Often 80% of the functionality of a project is implemented rather fast, the 20% remaining needs a lot more time. The reason for this mustn’t necessarily be the famous 80-20 rule, bad code ist often the root of the problem.
+Again and again, project after project, countless hours and resources are lost only because of poorly written code.
+That isn’t how it’s supposed to be!</p>
+
+<p>The presentation provides a few tips and tricks on various topics related to clean code.
+The slides are available on slideshare: <a title="Clean Code" href="https://www.slideshare.net/origamiaddict/clean-code-10006872" target="_blank">Clean Code</a></p>
+
+<p>View more <a href="https://www.slideshare.net/" target="_blank">presentations</a> from <a href="https://www.slideshare.net/origamiaddict" target="_blank">origamiaddict</a>&lt;</p>
+
+
+		</div>
+
+		<footer>
+
+			
+
+  <div class="meta">
+
+    <div class="author" data-animation="fadeInUp">
+                  
+      <span class="title">Written by</span>
+
+      <h4>Daniel Kummer</h4>
+      <p>I'm a software engineer who also enjoys lots of other things like diving, tinkering, photography, whiskey and much more...</p>
+
+      
+        <ul>
+          <li><a href="https://twitter.com/code_n_fold" title="Twitter" class="icon twitter">Twitter</a></li>
+          <li><a href="https://www.facebook.com/daniel.kummer" title="Facebook" class="icon facebook">Facebook</a></li>
+          
+          <li><a href="https://www.linkedin.com/pub/daniel-kummer/58/344/528" title="LinkedIn" class="icon linkedin">LinkedIn</a></li>
+          
+          
+          
+          <li><a href="feed://code-n-fold.com/feed.xml" title="RSS" class="icon rss">RSS</a></li>
+        </ul>
+      
+
+    </div>
+
+    <div class="share" data-animation="fadeInUp">
+                  
+      <span class="title">Share</span>
+
+      <ul>
+        <li><a href="https://twitter.com/home?status=Code%20and%20Origami%20%E2%80%93%20Software%20Engineering%20http://www.code-n-fold.com/talks/2011/11/22/clean-code-presentation-htgw-konstanz.html" title="Tweet" class="icon twitter">Tweet</a></li>
+        <li><a href="https://www.facebook.com/sharer/sharer.php?u=http://www.code-n-fold.com/talks/2011/11/22/clean-code-presentation-htgw-konstanz.html" title="Like" class="icon facebook">Like</a></li>
+        <li><a href="https://plus.google.com/share?url=http://www.code-n-fold.com/talks/2011/11/22/clean-code-presentation-htgw-konstanz.html" title="+1" class="icon google">+1</a></li>
+      </ul>
+
+    </div>
+
+  </div>
+
+
+
+			
+  <div class="comments" data-animation="fadeInUp">
+    
+    <span class="title">Comments</span>
+    <div id="disqus_thread"></div>
+
+    <script type="text/javascript">
+      var disqus_shortname = 'code-n-fold';
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+
+    <noscript>
+      Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+    </noscript>
+
+  </div>
+
+
+			
+
+	<div class="pagination" data-animation="fadeInUp">
+		
+		<a href="/2011/11/22/first-post.html" title="View Newer Posts" class="button newer">Newer</a>
+	</div>
+
+
+
+
+
+		</footer>
+
+	</article>
+
+</section>
+
+
+
+	
+		
+	
+
+	
+		
+	
+
+	<section class="teaser gradient-1" data-animation="fadeInUp">
+	      
+		<div class="excerpt">
+	            
+			<span class="title">less than 1 minute</span>
+
+			
+				<h1><a href="/2011/11/22/first-post.html" title="First Post">First Post</a></h1>
+			
+
+			<p>Everything begins somewhere...</p>
+
+			
+				<span class="meta">Published <b>Nov 22, 2011</b> in <b></b></span>
+			
+
+		</div>
+
+	</section>
+
+
+
+    
+
+      <footer data-animation="fadeInUp">
+        <div class="copyright">
+          <b>Copyright 2015 Daniel Kummer.</b> All Rights Reserved.
+        	<a href="mailto:daniel.kummer@gmail.com" title="Send E-Mail">Contact</a>
+        	<a href="/feed.xml" title="Subscribe to Feed">RSS</a>
+        </div>
+      </footer>
+      
+    
+
+    <script type="application/ld+json">
+    { "@context" : "http://schema.org",
+      "@type" : "Person",
+      "name" : "Daniel Kummer",
+      "url" : "http://www.code-n-fold.com",
+      "sameAs" : [ "http://www.facebook.com/daniel.kummer",
+        "http://www.twitter.com/code_n_fold"]
+    }
+    </script>
+    
+    <script src="/assets/jquery-2.1.1.min.js"></script>
+    <script src="/assets/viewportchecker.js"></script>
+    <script src="/assets/scripts.js"></script>
+
+  </body>
+
+</html>
