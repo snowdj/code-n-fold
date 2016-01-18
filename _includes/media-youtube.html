@@ -1,7 +1,7 @@
 <div class="media youtube" data-animation="fadeInUp">
 
 	{% if include.file %}
-		<iframe src="http://www.youtube.com/embed/{{ include.file | replace: 'https://www.youtube.com/watch?v=', '' }}" allowfullscreen></iframe>
+		<iframe src="http://www.youtube.com/embed/{{ include.file | replace: 'https://www.youtube.com/watch?v=', '' }}" frameborder="0" allowfullscreen></iframe>
 	{% endif %}
 
 	{% if include.title or include.caption or include.link %}
